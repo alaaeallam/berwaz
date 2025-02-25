@@ -11,13 +11,21 @@ gsap.registerPlugin(ScrollTrigger);
 
 const page = () => {
   const container = useRef();
-  const [windowWidth, setWindowWidth] = useState(
-    typeof window !== "undefined" ? window.innerWidth : 0
-  );
+  const [windowWidth, setWindowWidth] = useState(0);
+  const scrollTriggerRef = useRef(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
+    }
+  }, []);
 
   useGSAP(
     () => {
-      setWindowWidth(window.innerWidth);
+      if (scrollTriggerRef.current) {
+        scrollTriggerRef.current.kill();
+        scrollTriggerRef.current = null;
+      }
 
       const handleResize = () => {
         setWindowWidth(window.innerWidth);
@@ -25,37 +33,52 @@ const page = () => {
 
       window.addEventListener("resize", handleResize);
 
-      let scrollTriggerInstance;
+      const timeoutId = setTimeout(() => {
+        if (windowWidth > 900) {
+          const expertiseSection = document.querySelector(".expertise");
+          const expertiseHeader = document.querySelector(".expertise-header");
+          const services = document.querySelector(".services");
 
-      if (windowWidth > 900) {
-        const expertiseSection = document.querySelector(".expertise");
-        const expertiseHeader = document.querySelector(".expertise-header");
-        const services = document.querySelector(".services");
+          if (expertiseSection && expertiseHeader && services) {
+            ScrollTrigger.refresh();
 
-        if (expertiseSection && expertiseHeader && services) {
-          scrollTriggerInstance = ScrollTrigger.create({
-            trigger: expertiseSection,
-            start: "top top",
-            endTrigger: services,
-            end: "bottom bottom",
-            pin: expertiseHeader,
-            pinSpacing: false,
-          });
+            scrollTriggerRef.current = ScrollTrigger.create({
+              trigger: expertiseSection,
+              start: "top top",
+              endTrigger: services,
+              end: "bottom bottom",
+              pin: expertiseHeader,
+              pinSpacing: false,
+              onEnter: () => {
+                gsap.to(expertiseHeader, { duration: 0.1, ease: "power1.out" });
+              },
+            });
+          }
         }
-      }
+      }, 100);
 
       return () => {
         window.removeEventListener("resize", handleResize);
+        clearTimeout(timeoutId);
 
-        if (scrollTriggerInstance) {
-          scrollTriggerInstance.kill();
-        } else {
-          ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+        if (scrollTriggerRef.current) {
+          scrollTriggerRef.current.kill();
         }
       };
     },
     { dependencies: [windowWidth], scope: container }
   );
+
+  useEffect(() => {
+    const refreshTimeout = setTimeout(() => {
+      ScrollTrigger.refresh(true);
+    }, 300);
+
+    return () => {
+      clearTimeout(refreshTimeout);
+      ScrollTrigger.getAll().forEach((st) => st.kill());
+    };
+  }, []);
 
   return (
     <ReactLenis root>
