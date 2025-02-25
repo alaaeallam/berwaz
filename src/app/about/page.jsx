@@ -205,53 +205,9 @@ const page = () => {
           </div>
         </section>
 
-        <section className="about-copy">
-          <div className="container">
-            <h2>The Origin</h2>
-
-            <div className="about-copy-wrapper">
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id
-                repellendus tenetur odit ipsa esse reiciendis quis nihil sint.
-                Incidunt doloremque sit numquam est reiciendis quas veniam
-                adipisci architecto odio omnis voluptatum, optio cumque enim
-                dignissimos facilis distinctio esse dolores ipsum quaerat harum
-                quisquam fuga quam? Rem consequuntur dolor animi numquam!
-              </p>
-
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-                inventore consequuntur, nesciunt cumque quos possimus illo
-                voluptatem voluptas molestias aperiam optio et quaerat vitae
-                accusantium deleniti impedit tempore. Earum labore molestias ea
-                laudantium similique distinctio fuga? Repudiandae, consectetur!
-                Eveniet tempora voluptatibus facilis perferendis quia sit
-                doloribus asperiores nisi ab. Ducimus aut consequuntur molestiae
-                laboriosam odio quam repellat vel adipisci modi quas dignissimos
-                sit, libero, ea obcaecati aliquam placeat reprehenderit
-                doloribus quasi vitae sequi. Quae totam ipsam quos nulla minima,
-                dolore eos cumque dignissimos cupiditate odit. Aperiam tenetur
-                debitis assumenda consequuntur! Animi voluptatem nobis numquam
-                ex quam earum, suscipit neque adipisci.
-              </p>
-
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Praesentium, debitis! Officiis commodi autem sequi voluptate
-                tempore voluptates eligendi impedit corrupti doloremque ipsum
-                nihil molestiae enim rem neque eaque fugit odit unde omnis nobis
-                ipsa, ut, adipisci eos cum assumenda. Voluptatum sit libero
-                explicabo vitae necessitatibus nostrum odio. Consequuntur
-                adipisci molestiae tempora deserunt iste quae facilis eaque
-                architecto officiis cupiditate ipsum, voluptate error numquam
-                delectus illum debitis aut, repudiandae quasi commodi autem at
-                similique iusto sit.
-              </p>
-
-              <div className="about-copy-img">
-                <img src="/about/about-copy.jpg" alt="" />
-              </div>
-            </div>
+        <section className="about-outro-banner">
+          <div className="about-outro-img">
+            <img src="/about/about-outro.jpg" alt="" />
           </div>
         </section>
       </div>
