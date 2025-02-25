@@ -4,7 +4,38 @@
   height: 100svh;
   overflow: hidden;
   background-color: var(--bg);
+}
+
+.work-hero .container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 4em 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.work-hero h1 {
+  font-size: 15vw;
+}
+
+.work-hero p {
+  width: 35%;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .work-hero .container {
+    width: 75%;
+    padding: 8em 0 4em 0;
+  }
+
+  .work-hero h1 {
+    font-size: 20vw;
+  }
+
+  .work-hero p {
+    width: 100%;
+  }
 }

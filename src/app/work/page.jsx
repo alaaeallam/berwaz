@@ -5,7 +5,10 @@ const page = () => {
   return (
     <div className="page">
       <section className="work-hero">
-        <h1>Work</h1>
+        <div className="container">
+          <h1>From vision to victory</h1>
+          <p>Crafting digital marketing excellence with measurable impact</p>
+        </div>
       </section>
     </div>
   );
