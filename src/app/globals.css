@@ -1,6 +1,6 @@
 :root {
   --bg: #1a1a1a;
-  --copy: #fff;
+  --copy: #bac4b8;
 }
 
 ::view-transition-old(root),
@@ -104,12 +104,38 @@ h1 {
   font-weight: lighter;
   font-size: 7.5vw;
   line-height: 0.85;
-  color: #fff;
+  color: var(--copy);
+  will-change: transform;
+}
+
+h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-family: "dh";
+  font-weight: lighter;
+  font-size: 4vw;
+  line-height: 0.85;
+  color: var(--copy);
+  will-change: transform;
+}
+
+h3 {
+  position: relative;
+  text-transform: uppercase;
+  font-family: "dh";
+  font-weight: lighter;
+  font-size: 2.5vw;
+  line-height: 0.85;
+  color: var(--copy);
   will-change: transform;
 }
 
 @media (max-width: 900px) {
   h1 {
     font-size: 12vw;
+  }
+
+  h2 {
+    font-size: 10vw;
   }
 }

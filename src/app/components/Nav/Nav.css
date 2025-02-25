@@ -15,7 +15,7 @@ nav p,
 .menu-overlay-bar a,
 .menu-overlay-bar p {
   position: relative;
-  color: #fff;
+  color: var(--copy);
   display: block;
   will-change: transform;
   user-select: none;
@@ -93,7 +93,7 @@ nav a,
   font-weight: lighter;
   font-size: 7.5vw;
   line-height: 0.85;
-  color: #fff;
+  color: var(--copy);
 }
 
 @media (max-width: 900px) {
