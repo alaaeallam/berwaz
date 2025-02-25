@@ -2,59 +2,64 @@
 import "./about.css";
 
 import { ReactLenis } from "@studio-freight/react-lenis";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const page = () => {
+  const container = useRef();
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : 0
   );
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    setWindowWidth(window.innerWidth);
-
-    const handleResize = () => {
+  useGSAP(
+    () => {
       setWindowWidth(window.innerWidth);
-    };
 
-    window.addEventListener("resize", handleResize);
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
 
-    let scrollTriggerInstance;
+      window.addEventListener("resize", handleResize);
 
-    if (windowWidth > 900) {
-      const expertiseSection = document.querySelector(".expertise");
-      const expertiseHeader = document.querySelector(".expertise-header");
-      const services = document.querySelector(".services");
+      let scrollTriggerInstance;
 
-      if (expertiseSection && expertiseHeader && services) {
-        scrollTriggerInstance = ScrollTrigger.create({
-          trigger: expertiseSection,
-          start: "top top",
-          endTrigger: services,
-          end: "bottom bottom",
-          pin: expertiseHeader,
-          pinSpacing: false,
-        });
+      if (windowWidth > 900) {
+        const expertiseSection = document.querySelector(".expertise");
+        const expertiseHeader = document.querySelector(".expertise-header");
+        const services = document.querySelector(".services");
+
+        if (expertiseSection && expertiseHeader && services) {
+          scrollTriggerInstance = ScrollTrigger.create({
+            trigger: expertiseSection,
+            start: "top top",
+            endTrigger: services,
+            end: "bottom bottom",
+            pin: expertiseHeader,
+            pinSpacing: false,
+          });
+        }
       }
-    }
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
 
-      if (scrollTriggerInstance) {
-        scrollTriggerInstance.kill();
-      } else {
-        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-      }
-    };
-  }, [windowWidth]);
+        if (scrollTriggerInstance) {
+          scrollTriggerInstance.kill();
+        } else {
+          ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+        }
+      };
+    },
+    { dependencies: [windowWidth], scope: container }
+  );
 
   return (
     <ReactLenis root>
-      <div className="page">
+      <div className="page" ref={container}>
         <section className="about-hero">
           <div className="about-hero-bg">
             <img src="/about/hero.jpg" alt="" />
