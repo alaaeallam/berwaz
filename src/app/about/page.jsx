@@ -2,8 +2,34 @@
 import "./about.css";
 
 import { ReactLenis } from "@studio-freight/react-lenis";
+import { useEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const page = () => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const expertiseSection = document.querySelector(".expertise");
+    const expertiseHeader = document.querySelector(".expertise-header");
+    const services = document.querySelector(".services");
+
+    if (expertiseSection && expertiseHeader && services) {
+      ScrollTrigger.create({
+        trigger: expertiseSection,
+        start: "top top",
+        endTrigger: services,
+        end: "bottom bottom",
+        pin: expertiseHeader,
+        pinSpacing: false,
+      });
+    }
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
   return (
     <ReactLenis root>
       <div className="page">
