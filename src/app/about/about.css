@@ -64,7 +64,7 @@ section.expertise {
   width: 100vw;
   height: 100%;
   min-height: 100svh;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 .expertise-header {
@@ -76,7 +76,7 @@ section.expertise {
   height: 100svh;
   overflow: hidden;
   will-change: transform;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .expertise-header .container {
@@ -107,7 +107,7 @@ section.expertise {
   display: flex;
   padding: 5.5em 0 1em 0;
   will-change: transform;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 }
 
 .services .col {
