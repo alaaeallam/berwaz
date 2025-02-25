@@ -25,6 +25,37 @@
   margin: 0 auto;
 }
 
+.projects {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.project {
+  position: relative;
+  width: 100vw;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.project-banner-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.projects-outro {
+  width: 100vw;
+  height: 100svh;
+}
+
+.projects-outro .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 900px) {
   .work-hero .container {
     width: 75%;
