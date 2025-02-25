@@ -2,22 +2,18 @@
 import "./about.css";
 
 import { ReactLenis } from "@studio-freight/react-lenis";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 const page = () => {
-  const [windowWidth, setWindowWidth] = useState(0);
-  const expertiseSectionRef = useRef(null);
-  const expertiseHeaderRef = useRef(null);
-  const servicesRef = useRef(null);
-  const scrollTriggerRef = useRef(null);
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
 
   useEffect(() => {
-    // Register the plugin first
     gsap.registerPlugin(ScrollTrigger);
 
-    // Set window width only after component is mounted
     setWindowWidth(window.innerWidth);
 
     const handleResize = () => {
@@ -26,49 +22,30 @@ const page = () => {
 
     window.addEventListener("resize", handleResize);
 
-    // Wait for a brief moment to ensure DOM is fully rendered
-    const initScrollTrigger = () => {
-      // Kill any existing ScrollTrigger instances first
-      if (scrollTriggerRef.current) {
-        scrollTriggerRef.current.kill();
-      }
+    let scrollTriggerInstance;
 
-      // Only create ScrollTrigger if window width > 900 and all required elements exist
-      if (
-        windowWidth > 900 &&
-        expertiseSectionRef.current &&
-        expertiseHeaderRef.current &&
-        servicesRef.current
-      ) {
-        // Force a refresh to ensure accurate measurements
-        ScrollTrigger.refresh();
+    if (windowWidth > 900) {
+      const expertiseSection = document.querySelector(".expertise");
+      const expertiseHeader = document.querySelector(".expertise-header");
+      const services = document.querySelector(".services");
 
-        scrollTriggerRef.current = ScrollTrigger.create({
-          trigger: expertiseSectionRef.current,
+      if (expertiseSection && expertiseHeader && services) {
+        scrollTriggerInstance = ScrollTrigger.create({
+          trigger: expertiseSection,
           start: "top top",
-          endTrigger: servicesRef.current,
+          endTrigger: services,
           end: "bottom bottom",
-          pin: expertiseHeaderRef.current,
+          pin: expertiseHeader,
           pinSpacing: false,
-          markers: false, // Set to true for debugging
-          onRefresh: (self) => {
-            // This ensures proper positioning on refresh
-            self.scroll(self.scroll());
-          },
         });
       }
-    };
-
-    // Use a timeout to ensure all elements are ready and sized correctly
-    const timeoutId = setTimeout(initScrollTrigger, 100);
+    }
 
     return () => {
       window.removeEventListener("resize", handleResize);
-      clearTimeout(timeoutId);
 
-      // Clean up all ScrollTrigger instances
-      if (scrollTriggerRef.current) {
-        scrollTriggerRef.current.kill();
+      if (scrollTriggerInstance) {
+        scrollTriggerInstance.kill();
       } else {
         ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
       }
@@ -151,8 +128,8 @@ const page = () => {
           </div>
         </section>
 
-        <section className="expertise" ref={expertiseSectionRef}>
-          <div className="expertise-header" ref={expertiseHeaderRef}>
+        <section className="expertise">
+          <div className="expertise-header">
             <div className="container">
               <div className="row">
                 <h1>
@@ -171,7 +148,7 @@ const page = () => {
             </div>
           </div>
 
-          <div className="services" ref={servicesRef}>
+          <div className="services">
             <div className="col"></div>
             <div className="col">
               <div className="service">
