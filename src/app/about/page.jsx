@@ -2,33 +2,55 @@
 import "./about.css";
 
 import { ReactLenis } from "@studio-freight/react-lenis";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 const page = () => {
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const expertiseSection = document.querySelector(".expertise");
-    const expertiseHeader = document.querySelector(".expertise-header");
-    const services = document.querySelector(".services");
+    setWindowWidth(window.innerWidth);
 
-    if (expertiseSection && expertiseHeader && services) {
-      ScrollTrigger.create({
-        trigger: expertiseSection,
-        start: "top top",
-        endTrigger: services,
-        end: "bottom bottom",
-        pin: expertiseHeader,
-        pinSpacing: false,
-      });
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    let scrollTriggerInstance;
+
+    if (windowWidth > 900) {
+      const expertiseSection = document.querySelector(".expertise");
+      const expertiseHeader = document.querySelector(".expertise-header");
+      const services = document.querySelector(".services");
+
+      if (expertiseSection && expertiseHeader && services) {
+        scrollTriggerInstance = ScrollTrigger.create({
+          trigger: expertiseSection,
+          start: "top top",
+          endTrigger: services,
+          end: "bottom bottom",
+          pin: expertiseHeader,
+          pinSpacing: false,
+        });
+      }
     }
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      window.removeEventListener("resize", handleResize);
+
+      if (scrollTriggerInstance) {
+        scrollTriggerInstance.kill();
+      } else {
+        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      }
     };
-  }, []);
+  }, [windowWidth]);
 
   return (
     <ReactLenis root>
@@ -131,53 +153,48 @@ const page = () => {
             <div className="col">
               <div className="service">
                 <h3>(01)</h3>
-                <h2>Strategic Planning</h2>
-                <p>DISCOVERY PHASE</p>
-                <p>PLANNING</p>
-                <p>DEDICATED TEAM</p>
-                <p>STRATEGY EXECUTION</p>
-                <p>KPI'S & ROI</p>
-                <p>EVALUATION AND POST-MORTEMS</p>
+                <h2>Brand Strategy</h2>
+                <p>01 Market Research & Insights</p>
+                <p>02 Positioning & Differentiation</p>
+                <p>03 Audience Analysis</p>
+                <p>04 Messaging Framework</p>
+                <p>05 Long-Term Growth Planning</p>
               </div>
               <div className="service">
                 <h3>(02)</h3>
-                <h2>Strategic Planning</h2>
-                <p>DISCOVERY PHASE</p>
-                <p>PLANNING</p>
-                <p>DEDICATED TEAM</p>
-                <p>STRATEGY EXECUTION</p>
-                <p>KPI'S & ROI</p>
-                <p>EVALUATION AND POST-MORTEMS</p>
+                <h2>Visual Identity</h2>
+                <p>01 Logo & Brand Guidelines</p>
+                <p>02 Color Theory & Typography</p>
+                <p>03 Design Systems & Assets</p>
+                <p>04 Illustration & Iconography</p>
+                <p>05 Brand Voice & Personality</p>
               </div>
               <div className="service">
                 <h3>(03)</h3>
-                <h2>Strategic Planning</h2>
-                <p>DISCOVERY PHASE</p>
-                <p>PLANNING</p>
-                <p>DEDICATED TEAM</p>
-                <p>STRATEGY EXECUTION</p>
-                <p>KPI'S & ROI</p>
-                <p>EVALUATION AND POST-MORTEMS</p>
+                <h2>Digital Experiences</h2>
+                <p>01 Web Design & Development</p>
+                <p>02 UI/UX & Interactive Design</p>
+                <p>03 Prototyping & Wireframing</p>
+                <p>04 Mobile & Web App Interfaces</p>
+                <p>05 Performance & Accessibility</p>
               </div>
               <div className="service">
                 <h3>(04)</h3>
-                <h2>Strategic Planning</h2>
-                <p>DISCOVERY PHASE</p>
-                <p>PLANNING</p>
-                <p>DEDICATED TEAM</p>
-                <p>STRATEGY EXECUTION</p>
-                <p>KPI'S & ROI</p>
-                <p>EVALUATION AND POST-MORTEMS</p>
+                <h2>Content & Storytelling</h2>
+                <p>01 Creative Copywriting</p>
+                <p>02 Video & Motion Graphics</p>
+                <p>03 Social Media Campaigns</p>
+                <p>04 Content Strategy</p>
+                <p>05 Brand Narratives</p>
               </div>
               <div className="service">
                 <h3>(05)</h3>
-                <h2>Strategic Planning</h2>
-                <p>DISCOVERY PHASE</p>
-                <p>PLANNING</p>
-                <p>DEDICATED TEAM</p>
-                <p>STRATEGY EXECUTION</p>
-                <p>KPI'S & ROI</p>
-                <p>EVALUATION AND POST-MORTEMS</p>
+                <h2>Marketing & Growth</h2>
+                <p>01 SEO & Performance Optimization</p>
+                <p>02 Ad Campaigns & Paid Media</p>
+                <p>03 Email & CRM Strategies</p>
+                <p>04 Conversion Rate Optimization</p>
+                <p>05 Analytics & Insights</p>
               </div>
             </div>
           </div>

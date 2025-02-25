@@ -74,6 +74,7 @@ section.expertise {
   width: 100vw;
   height: 100svh;
   overflow: hidden;
+  will-change: transform;
 }
 
 .expertise-header .container {
@@ -98,10 +99,12 @@ section.expertise {
 }
 
 .services {
+  position: relative;
   width: 50%;
   margin: 0 auto;
   display: flex;
-  padding: 5.5em 0;
+  padding: 5.5em 0 1em 0;
+  will-change: transform;
 }
 
 .services .col {
@@ -116,7 +119,7 @@ section.expertise {
   margin-bottom: 0.5em;
 }
 
-.service {
+.service:not(:last-child) {
   margin-bottom: 8em;
 }
 
@@ -140,5 +143,35 @@ section.expertise {
 
   .about-copy .container {
     width: 100%;
+  }
+
+  .expertise-header .container {
+    justify-content: flex-start;
+    gap: 2em;
+  }
+
+  .expertise-header {
+    height: max-content;
+  }
+
+  .expertise-img-1 {
+    display: none;
+  }
+
+  .expertise-img-2 {
+    width: 100%;
+  }
+
+  .services {
+    width: 100%;
+    padding: 70vh 20px 4em 20px;
+  }
+
+  .service:not(:last-child) {
+    margin-bottom: 4em;
+  }
+
+  .services .col:nth-child(1) {
+    display: none;
   }
 }
