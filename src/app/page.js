@@ -12,6 +12,16 @@ export default function Home() {
         <div className="hero-header">
           <h1>Beyond the Frame, Into the Soul.</h1>
         </div>
+
+        <div className="hero-footer">
+          <div className="site-info">
+            <a href="https://www.youtube.com/@codegrid">Watch Showreel</a>
+          </div>
+
+          <div className="contact-link">
+            <a href="https://www.youtube.com/@codegrid">Youtube</a>
+          </div>
+        </div>
       </section>
     </div>
   );
