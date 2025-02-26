@@ -236,6 +236,150 @@ const page = () => {
             <img src="/about/about-outro.jpg" alt="" />
           </div>
         </section>
+
+        <section className="founder-voice">
+          <div className="container">
+            <h2>
+              "ISOChrome is a trailblazer in influencer marketing, connecting
+              brands with influential voices across social media to build
+              impactful messages.”
+            </h2>
+
+            <div className="founder-image">
+              <img src="/about/expertise-img-1.jpg" alt="" />
+            </div>
+            <div className="founter-info">
+              <p>Kristina Argento</p>
+              <p>Founder</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="client-logos">
+          <div className="container">
+            <div className="logos-grid">
+              <div className="logo-item">
+                <div className="logo-details">
+                  <p>&#9632;</p>
+                  <p>Logo Name</p>
+                </div>
+                <img src="/client-logos/A1.png" alt="Client Logo A1" />
+              </div>
+              <div className="logo-item">
+                <div className="logo-details">
+                  <p>&#9632;</p>
+                  <p>Logo Name</p>
+                </div>
+                <img src="/client-logos/A2.png" alt="Client Logo A2" />
+              </div>
+              <div className="logo-item">
+                <div className="logo-details">
+                  <p>&#9632;</p>
+                  <p>Logo Name</p>
+                </div>
+                <img src="/client-logos/B1.png" alt="Client Logo A3" />
+              </div>
+              <div className="logo-item">
+                <div className="logo-details">
+                  <p>&#9632;</p>
+                  <p>Logo Name</p>
+                </div>
+                <img src="/client-logos/B2.png" alt="Client Logo A4" />
+              </div>
+              <div className="logo-item">
+                <div className="logo-details">
+                  <p>&#9632;</p>
+                  <p>Logo Name</p>
+                </div>
+                <img src="/client-logos/C1.png" alt="Client Logo B1" />
+              </div>
+              <div className="logo-item">
+                <div className="logo-details">
+                  <p>&#9632;</p>
+                  <p>Logo Name</p>
+                </div>
+                <img src="/client-logos/C2.png" alt="Client Logo B2" />
+              </div>
+              <div className="logo-item">
+                <div className="logo-details">
+                  <p>&#9632;</p>
+                  <p>Logo Name</p>
+                </div>
+                <img src="/client-logos/D1.png" alt="Client Logo B3" />
+              </div>
+              <div className="logo-item">
+                <div className="logo-details">
+                  <p>&#9632;</p>
+                  <p>Logo Name</p>
+                </div>
+                <img src="/client-logos/D2.png" alt="Client Logo B4" />
+              </div>
+              <div className="logo-item">
+                <div className="logo-details">
+                  <p>&#9632;</p>
+                  <p>Logo Name</p>
+                </div>
+                <img src="/client-logos/E1.png" alt="Client Logo C1" />
+              </div>
+              <div className="logo-item">
+                {" "}
+                <div className="logo-details">
+                  <p>&#9632;</p>
+                  <p>Logo Name</p>
+                </div>
+                <img src="/client-logos/E2.png" alt="Client Logo C2" />
+              </div>
+              <div className="logo-item">
+                {" "}
+                <div className="logo-details">
+                  <p>&#9632;</p>
+                  <p>Logo Name</p>
+                </div>
+                <img src="/client-logos/F1.png" alt="Client Logo C3" />
+              </div>
+              <div className="logo-item">
+                {" "}
+                <div className="logo-details">
+                  <p>&#9632;</p>
+                  <p>Logo Name</p>
+                </div>
+                <img src="/client-logos/F2.png" alt="Client Logo C4" />
+              </div>
+              <div className="logo-item">
+                {" "}
+                <div className="logo-details">
+                  <p>&#9632;</p>
+                  <p>Logo Name</p>
+                </div>
+                <img src="/client-logos/G1.png" alt="Client Logo D1" />
+              </div>
+              <div className="logo-item">
+                {" "}
+                <div className="logo-details">
+                  <p>&#9632;</p>
+                  <p>Logo Name</p>
+                </div>
+                <img src="/client-logos/G2.png" alt="Client Logo D2" />
+              </div>
+              <div className="logo-item">
+                {" "}
+                <div className="logo-details">
+                  <p>&#9632;</p>
+                  <p>Logo Name</p>
+                </div>
+                <img src="/client-logos/H1.png" alt="Client Logo D3" />
+              </div>
+              <div className="logo-item">
+                {" "}
+                <div className="logo-details">
+                  <p>&#9632;</p>
+                  <p>Logo Name</p>
+                </div>
+                <img src="/client-logos/H2.png" alt="Client Logo D4" />
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </ReactLenis>
   );
