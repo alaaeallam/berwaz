@@ -100,7 +100,10 @@ const Page = () => {
         <section className="work-hero">
           <div className="container">
             <h1>From vision to victory</h1>
-            <p>Crafting digital marketing excellence with measurable impact</p>
+            <p>
+              Elevating digital marketing excellence through strategic
+              innovation
+            </p>
           </div>
         </section>
 
