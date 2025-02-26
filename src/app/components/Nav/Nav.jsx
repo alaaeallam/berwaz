@@ -12,6 +12,7 @@ const Nav = () => {
   const menuOverlayBarRef = useRef(null);
   const menuOpenBtnRef = useRef(null);
   const menuCloseBtnRef = useRef(null);
+  const menuFooterRef = useRef(null);
 
   function slideInOut() {
     document.documentElement.animate(
@@ -57,7 +58,8 @@ const Nav = () => {
       !menuCloseBtnRef.current ||
       !navRef.current ||
       !menuOpenBtnRef.current ||
-      !menuOverlayRef.current
+      !menuOverlayRef.current ||
+      !menuFooterRef.current
     ) {
       return;
     }
@@ -66,6 +68,8 @@ const Nav = () => {
       [
         menuOverlayBarRef.current.querySelector("a"),
         menuCloseBtnRef.current.querySelector("p"),
+        menuFooterRef.current.querySelector(".showreel a"),
+        ...menuFooterRef.current.querySelectorAll(".media-link a"),
       ],
       {
         y: -20,
@@ -75,6 +79,12 @@ const Nav = () => {
         onComplete: () => {
           gsap.set(menuOverlayBarRef.current.querySelector("a"), { y: 20 });
           gsap.set(menuCloseBtnRef.current.querySelector("p"), { y: 20 });
+          gsap.set(menuFooterRef.current.querySelector(".showreel a"), {
+            y: 20,
+          });
+          gsap.set(menuFooterRef.current.querySelectorAll(".media-link a"), {
+            y: 20,
+          });
         },
       }
     );
@@ -124,7 +134,8 @@ const Nav = () => {
       !menuOpenBtnRef.current ||
       !menuOverlayRef.current ||
       !menuOverlayBarRef.current ||
-      !menuCloseBtnRef.current
+      !menuCloseBtnRef.current ||
+      !menuFooterRef.current
     ) {
       return;
     }
@@ -168,6 +179,8 @@ const Nav = () => {
       [
         menuOverlayBarRef.current.querySelector("a"),
         menuCloseBtnRef.current.querySelector("p"),
+        menuFooterRef.current.querySelector(".showreel a"),
+        ...menuFooterRef.current.querySelectorAll(".media-link a"),
       ],
       {
         y: 0,
@@ -237,6 +250,20 @@ const Nav = () => {
           </div>
           <div className="menu-toggle-close" ref={menuCloseBtnRef}>
             <p>Close</p>
+          </div>
+        </div>
+
+        <div className="menu-footer" ref={menuFooterRef}>
+          <div className="showreel">
+            <a href="#">Showreel</a>
+          </div>
+          <div className="socials">
+            <div className="media-link">
+              <a href="#">Instagram</a>
+            </div>
+            <div className="media-link">
+              <a href="#">Twitter</a>
+            </div>
           </div>
         </div>
 
