@@ -1,9 +1,11 @@
 "use client";
+import "./Nav.css";
 import { useEffect, useRef } from "react";
+
 import { useTransitionRouter } from "next-view-transitions";
+
 import gsap from "gsap";
 import CustomEase from "gsap/dist/CustomEase";
-import "./Nav.css";
 
 const Nav = () => {
   const router = useTransitionRouter();
@@ -255,14 +257,14 @@ const Nav = () => {
 
         <div className="menu-footer" ref={menuFooterRef}>
           <div className="showreel">
-            <a href="#">Showreel</a>
+            <a href="https://vimeo.com/1027126039">Showreel</a>
           </div>
           <div className="socials">
             <div className="media-link">
-              <a href="#">Instagram</a>
+              <a href="https://www.instagram.com/codegridweb/">Instagram</a>
             </div>
             <div className="media-link">
-              <a href="#">Twitter</a>
+              <a href="https://x.com/codegridweb">Twitter</a>
             </div>
           </div>
         </div>
