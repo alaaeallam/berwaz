@@ -85,72 +85,75 @@ const page = () => {
       <div className="page" ref={container}>
         <section className="about-hero">
           <div className="about-hero-bg">
-            <img src="/about/hero.jpg" alt="" />
+            <img src="/about/hero.jpg" alt="ISOChrome About Hero Image" />
           </div>
 
           <div className="container">
-            <h1>Welcome to a new era</h1>
+            <h1>Shaping the Future of Creativity</h1>
 
             <div className="about-tagline">
               <div className="col">
-                <p>About us</p>
+                <p>Who We Are</p>
               </div>
               <div className="col">
                 <p>
-                  Transcending boundaries of conventional pR and influencer
-                  marketing.
+                  Where strategy meets storytelling—crafting bold, unforgettable
+                  brand experiences.
                 </p>
               </div>
             </div>
-            <h1>of brand communication</h1>
+            <h1>with Vision and Innovation</h1>
           </div>
         </section>
 
         <section className="about-copy">
           <div className="container">
-            <h2>Our Story</h2>
+            <h2>The Origin</h2>
 
             <div className="about-copy-wrapper">
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id
-                repellendus tenetur odit ipsa esse reiciendis quis nihil sint.
-                Incidunt doloremque sit numquam est reiciendis quas veniam
-                adipisci architecto odio omnis voluptatum, optio cumque enim
-                dignissimos facilis distinctio esse dolores ipsum quaerat harum
-                quisquam fuga quam? Rem consequuntur dolor animi numquam!
+                ISOChrome is more than a creative agency—we are storytellers,
+                strategists, and visionaries dedicated to redefining brand
+                communication. We craft experiences that go beyond visuals,
+                blending strategy with creativity to create lasting impact.
+                Every brand has a unique identity, and we specialize in bringing
+                that identity to life with immersive storytelling, cutting-edge
+                design, and audience-driven narratives. From concept to
+                execution, we ensure that every campaign is crafted with
+                precision and passion. We don’t just create content—we engineer
+                experiences that inspire engagement and action.
               </p>
 
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-                inventore consequuntur, nesciunt cumque quos possimus illo
-                voluptatem voluptas molestias aperiam optio et quaerat vitae
-                accusantium deleniti impedit tempore. Earum labore molestias ea
-                laudantium similique distinctio fuga? Repudiandae, consectetur!
-                Eveniet tempora voluptatibus facilis perferendis quia sit
-                doloribus asperiores nisi ab. Ducimus aut consequuntur molestiae
-                laboriosam odio quam repellat vel adipisci modi quas dignissimos
-                sit, libero, ea obcaecati aliquam placeat reprehenderit
-                doloribus quasi vitae sequi. Quae totam ipsam quos nulla minima,
-                dolore eos cumque dignissimos cupiditate odit. Aperiam tenetur
-                debitis assumenda consequuntur! Animi voluptatem nobis numquam
-                ex quam earum, suscipit neque adipisci.
+                Our approach is built on innovation, ensuring every project is
+                fresh, dynamic, and purpose-driven. Whether it's **brand
+                strategy, influencer collaborations, or digital campaigns**, we
+                help brands stand out, connect authentically, and leave a
+                lasting impression. We combine creative vision with analytical
+                insights to develop strategies that not only capture attention
+                but also drive real impact in an ever-evolving digital
+                landscape. We believe in the power of collaboration. By working
+                closely with our clients, we align our creative strategies with
+                their business objectives, ensuring that every campaign is
+                tailored to meet their unique goals.
               </p>
 
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Praesentium, debitis! Officiis commodi autem sequi voluptate
-                tempore voluptates eligendi impedit corrupti doloremque ipsum
-                nihil molestiae enim rem neque eaque fugit odit unde omnis nobis
-                ipsa, ut, adipisci eos cum assumenda. Voluptatum sit libero
-                explicabo vitae necessitatibus nostrum odio. Consequuntur
-                adipisci molestiae tempora deserunt iste quae facilis eaque
-                architecto officiis cupiditate ipsum, voluptate error numquam
-                delectus illum debitis aut, repudiandae quasi commodi autem at
-                similique iusto sit.
+                At ISOChrome, we push boundaries, challenge conventions, and
+                shape the future of branding. With every campaign, we aim to
+                turn ideas into movements, transforming how brands interact with
+                their audiences in a rapidly evolving digital world. Creativity
+                isn’t just about aesthetics—it’s about impact, engagement, and
+                innovation that goes beyond the expected. As pioneers in the
+                creative space, we thrive on experimentation and fearless
+                execution.
               </p>
 
               <div className="about-copy-img">
-                <img src="/about/about-copy.jpg" alt="" />
+                <img
+                  src="/about/about-copy.jpg"
+                  alt="ISOChrome Creative Team at Work"
+                />
               </div>
             </div>
           </div>
@@ -161,9 +164,9 @@ const page = () => {
             <div className="container">
               <div className="row">
                 <h1>
-                  Our <br />
-                  Expertises
+                  What we <br /> do the best
                 </h1>
+
                 <div className="expertise-img-1">
                   <img src="/about/expertise-img-1.jpg" alt="" />
                 </div>

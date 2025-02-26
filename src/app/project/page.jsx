@@ -10,31 +10,31 @@ const page = () => {
         <section className="project-hero">
           <div className="col">
             <div className="project-hero-img">
-              <img src="/about/about-copy.jpg" alt="" />
+              <img src="/project/project-img-1.jpg" alt="" />
             </div>
           </div>
           <div className="col">
             <div className="container">
               <div className="project-page-title">
-                <h1>Dulcedo Models: Model Search</h1>
+                <h1>Pulse Interactive Digital</h1>
               </div>
               <div className="row">
                 <div className="sub-col">
                   <p>Client</p>
-                  <h3>Dulcedo - Models division</h3>
+                  <h3>Northstar Co.</h3>
                 </div>
                 <div className="sub-col">
                   <p>Services</p>
-                  <h3>Social Media</h3>
+                  <h3>Content Creation</h3>
                 </div>
               </div>
               <div className="row">
                 <div className="sub-col"></div>
                 <div className="sub-col">
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusamus hic, sed blanditiis repellat perferendis ipsam
-                    sapiente porro atque perspiciatis dolorum?
+                    Through collaborative strategy and innovative digital
+                    solutions, we helped Northstar establish a stronger online
+                    presence.
                   </p>
                 </div>
               </div>
@@ -49,32 +49,34 @@ const page = () => {
             </div>
             <div className="col">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
-                voluptate sapiente quisquam laboriosam nam sequi illo excepturi
-                sint? Perspiciatis, veritatis? Distinctio commodi exercitationem
-                recusandae provident veniam? Mollitia magni voluptates, non, quo
-                blanditiis atque eum fugiat numquam neque sequi dolores nemo.
+                Pulse Digital partnered with Northstar Innovations to develop a
+                comprehensive interactive campaign that would strengthen their
+                market position and expand their digital footprint. The project
+                focused on creating engaging, conversion-driven content that
+                resonated with their target audience while maintaining brand
+                consistency across all platforms.
               </p>
 
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi
-                sequi optio nam harum doloremque. Iusto voluptas non corporis
-                ducimus, dolore quae excepturi voluptate fuga modi earum alias
-                natus, eaque officia ipsa incidunt beatae voluptatem cum, quis
-                totam consequuntur ullam. Tempora, deserunt aut recusandae
-                suscipit eligendi nihil cupiditate similique nostrum sit
-                tenetur. Sunt placeat error cum dolorum totam! Praesentium,
-                incidunt neque?
+                Our strategy involved a multi-channel approach combining social
+                media optimization, content marketing, and targeted digital
+                advertising. We developed custom graphics, interactive elements,
+                and compelling narratives that highlighted Northstar's
+                innovative solutions. The campaign featured responsive design
+                elements that adapted seamlessly to different devices, ensuring
+                a consistent user experience regardless of how customers
+                accessed the content.
               </p>
 
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Eligendi provident itaque ipsum soluta exercitationem
-                repudiandae autem. Cum commodi maxime explicabo voluptates,
-                autem quis. Dicta, atque! Quibusdam, iste illum. Incidunt
-                accusamus quos esse soluta veritatis minima iusto laboriosam
-                repudiandae voluptates quis? Voluptas in natus neque veniam ad
-                totam. Doloribus, nemo sint!
+                The results exceeded initial projections, with Northstar
+                experiencing a 38% increase in qualified leads and 42% growth in
+                social media engagement. Website traffic from organic searches
+                improved significantly, and average session duration increased
+                by nearly three minutes. This project demonstrated how strategic
+                digital marketing can transform brand perception and drive
+                meaningful business outcomes when executed with creativity and
+                precision.
               </p>
             </div>
           </div>
@@ -85,7 +87,7 @@ const page = () => {
             <div className="col"></div>
             <div className="col">
               <div className="project-info-img-1">
-                <img src="/project/project-info-1.jpg" alt="" />
+                <img src="/project/project-img-2.jpg" alt="" />
               </div>
             </div>
           </div>
@@ -94,15 +96,21 @@ const page = () => {
         <section className="project-info">
           <div className="container">
             <div className="col">
-              <h3>Tactics</h3>
+              <h3>Strategy</h3>
             </div>
             <div className="col">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
-                voluptate sapiente quisquam laboriosam nam sequi illo excepturi
-                sint? Perspiciatis, veritatis? Distinctio commodi exercitationem
-                recusandae provident veniam? Mollitia magni voluptates, non, quo
-                blanditiis atque eum fugiat numquam neque sequi dolores nemo.
+                We implemented a strategic multi-platform approach for Pulse
+                Digital's campaign, beginning with comprehensive audience
+                analysis to identify key engagement opportunities. Our tactics
+                included creating custom interactive content for Instagram and
+                LinkedIn, developing targeted Google and Meta ad campaigns with
+                A/B tested creative assets, and producing a series of thought
+                leadership articles distributed through industry newsletters. We
+                further enhanced engagement through virtual events and
+                interactive website elements that encouraged visitor
+                participation while collecting valuable user data to
+                continuously refine our targeting strategy.
               </p>
             </div>
           </div>
@@ -111,37 +119,37 @@ const page = () => {
         <section className="project-info">
           <div className="container">
             <div className="col">
-              <h3>Results</h3>
+              <h3>Campaign Performance</h3>
             </div>
             <div className="col">
               <div className="stat">
-                <h1>82,8K</h1>
-                <span>Reel Plays</span>
+                <h1>97.4K</h1>
+                <span>Video Views</span>
               </div>
 
               <div className="stat">
-                <h1>2,9K</h1>
+                <h1>3.8K</h1>
                 <span>Total Engagement</span>
               </div>
 
               <div className="stat">
-                <h1>39,2K</h1>
+                <h1>45.6K</h1>
                 <span>Total Reach</span>
               </div>
 
               <div className="stat">
-                <h1>428</h1>
-                <span>New Followers</span>
+                <h1>512</h1>
+                <span>Conversions</span>
               </div>
 
               <div className="stat">
-                <h1>155,1K</h1>
+                <h1>183.7K</h1>
                 <span>Impressions</span>
               </div>
 
               <div className="stat">
-                <h1>3K</h1>
-                <span>Likes</span>
+                <h1>4.2K</h1>
+                <span>Interactions</span>
               </div>
             </div>
           </div>
@@ -149,30 +157,38 @@ const page = () => {
 
         <section className="project-preview-img">
           <div className="project-preview-img-wrapper">
-            <img src="/project/project-info-1.jpg" alt="" />
+            <img src="/project/project-img-3.jpg" alt="" />
           </div>
         </section>
 
         <section className="project-info project-info-outro">
           <div className="container">
             <div className="col">
-              <h3>Tactics</h3>
+              <h3>Execution</h3>
             </div>
             <div className="col">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
-                voluptate sapiente quisquam laboriosam nam sequi illo excepturi
-                sint? Perspiciatis, veritatis? Distinctio commodi exercitationem
-                recusandae provident veniam? Mollitia magni voluptates, non, quo
-                blanditiis atque eum fugiat numquam neque sequi dolores nemo.
+                For the Pulse Digital campaign, we implemented a multi-faceted
+                digital strategy centered on audience engagement and conversion
+                optimization. Our team developed custom-designed interactive
+                elements across all touchpoints, including shoppable Instagram
+                posts, targeted LinkedIn content, and a series of
+                performance-optimized landing pages. We leveraged data-driven
+                insights to identify peak engagement windows and adjusted
+                content delivery accordingly, ensuring maximum visibility within
+                the target demographic.
               </p>
 
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
-                voluptate sapiente quisquam laboriosam nam sequi illo excepturi
-                sint? Perspiciatis, veritatis? Distinctio commodi exercitationem
-                recusandae provident veniam? Mollitia magni voluptates, non, quo
-                blanditiis atque eum fugiat numquam neque sequi dolores nemo.
+                Content creation focused on storytelling that highlighted
+                Northstar's unique value proposition while addressing specific
+                pain points identified through customer research. We deployed
+                A/B testing protocols for all key campaign elements, allowing us
+                to refine messaging and visual assets based on real-time
+                performance data. This adaptive approach enabled us to pivot
+                quickly in response to engagement metrics, maximizing campaign
+                effectiveness through continuous optimization throughout the
+                project lifecycle.
               </p>
             </div>
           </div>

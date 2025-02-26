@@ -8,6 +8,44 @@ import { useTransitionRouter } from "next-view-transitions";
 const Page = () => {
   const router = useTransitionRouter();
 
+  const projectsData = [
+    {
+      id: 1,
+      name: "Horizon Branding",
+      imageUrl: "/projects/project-banner-1.jpg",
+    },
+    {
+      id: 2,
+      name: "Pulse Digital",
+      imageUrl: "/projects/project-banner-2.jpg",
+    },
+    {
+      id: 3,
+      name: "Elevate Studios",
+      imageUrl: "/projects/project-banner-3.jpg",
+    },
+    {
+      id: 4,
+      name: "Nova Marketing",
+      imageUrl: "/projects/project-banner-4.jpg",
+    },
+    {
+      id: 5,
+      name: "Catalyst Media",
+      imageUrl: "/projects/project-banner-5.jpg",
+    },
+    {
+      id: 6,
+      name: "Spectrum Design",
+      imageUrl: "/projects/project-banner-6.jpg",
+    },
+    {
+      id: 7,
+      name: "Vertex Creative",
+      imageUrl: "/projects/project-banner-7.jpg",
+    },
+  ];
+
   function slideInOut() {
     document.documentElement.animate(
       [
@@ -67,97 +105,21 @@ const Page = () => {
         </section>
 
         <section className="projects">
-          <div className="project">
-            <div className="project-banner-img">
-              <ParallaxImage src="/projects/project-banner-1.jpg" alt="" />
-              <div className="project-title">
-                <a
-                  href="/project"
-                  onClick={(e) => handleNavigation(e, "/project")}
-                >
-                  <h1>Project Name</h1>
-                </a>
+          {projectsData.map((project) => (
+            <div className="project" key={project.id}>
+              <div className="project-banner-img">
+                <ParallaxImage src={project.imageUrl} alt={project.name} />
+                <div className="project-title">
+                  <a
+                    href="/project"
+                    onClick={(e) => handleNavigation(e, "/project")}
+                  >
+                    <h1>{project.name}</h1>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="project">
-            <div className="project-banner-img">
-              <ParallaxImage src="/projects/project-banner-2.jpg" alt="" />
-              <div className="project-title">
-                <a
-                  href="/project"
-                  onClick={(e) => handleNavigation(e, "/project")}
-                >
-                  <h1>Project Name</h1>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="project">
-            <div className="project-banner-img">
-              <ParallaxImage src="/projects/project-banner-3.jpg" alt="" />
-              <div className="project-title">
-                <a
-                  href="/project"
-                  onClick={(e) => handleNavigation(e, "/project")}
-                >
-                  <h1>Project Name</h1>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="project">
-            <div className="project-banner-img">
-              <ParallaxImage src="/projects/project-banner-4.jpg" alt="" />
-              <div className="project-title">
-                <a
-                  href="/project"
-                  onClick={(e) => handleNavigation(e, "/project")}
-                >
-                  <h1>Project Name</h1>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="project">
-            <div className="project-banner-img">
-              <ParallaxImage src="/projects/project-banner-5.jpg" alt="" />
-              <div className="project-title">
-                <a
-                  href="/project"
-                  onClick={(e) => handleNavigation(e, "/project")}
-                >
-                  <h1>Project Name</h1>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="project">
-            <div className="project-banner-img">
-              <ParallaxImage src="/projects/project-banner-6.jpg" alt="" />
-              <div className="project-title">
-                <a
-                  href="/project"
-                  onClick={(e) => handleNavigation(e, "/project")}
-                >
-                  <h1>Project Name</h1>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="project">
-            <div className="project-banner-img">
-              <ParallaxImage src="/projects/project-banner-7.jpg" alt="" />
-              <div className="project-title">
-                <a
-                  href="/project"
-                  onClick={(e) => handleNavigation(e, "/project")}
-                >
-                  <h1>Project Name</h1>
-                </a>
-              </div>
-            </div>
-          </div>
+          ))}
         </section>
       </div>
     </ReactLenis>
