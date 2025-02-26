@@ -53,17 +53,6 @@
   will-change: transform, scale;
 }
 
-.projects-outro {
-  width: 100vw;
-  height: 100svh;
-}
-
-.projects-outro .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 @media (max-width: 900px) {
   .work-hero .container {
     width: 75%;

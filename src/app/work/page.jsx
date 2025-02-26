@@ -1,10 +1,61 @@
 "use client";
-import "./work.css";
 
+import "./work.css";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import ParallaxImage from "../components/ParallaxImage/ParallaxImage";
+import { useTransitionRouter } from "next-view-transitions";
 
-const page = () => {
+const Page = () => {
+  const router = useTransitionRouter();
+
+  function slideInOut() {
+    document.documentElement.animate(
+      [
+        {
+          opacity: 1,
+          transform: "translateY(0)",
+        },
+        {
+          opacity: 0.4,
+          transform: "translateY(-35%)",
+        },
+      ],
+      {
+        duration: 1500,
+        easing: "cubic-bezier(0.87, 0, 0.13, 1)",
+        fill: "forwards",
+        pseudoElement: "::view-transition-old(root)",
+      }
+    );
+
+    document.documentElement.animate(
+      [
+        {
+          clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+        },
+        {
+          clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+        },
+      ],
+      {
+        duration: 1500,
+        easing: "cubic-bezier(0.87, 0, 0.13, 1)",
+        fill: "forwards",
+        pseudoElement: "::view-transition-new(root)",
+      }
+    );
+  }
+
+  const handleNavigation = (e, path) => {
+    e.preventDefault();
+
+    setTimeout(() => {
+      router.push(path, {
+        onTransitionReady: slideInOut,
+      });
+    }, 200);
+  };
+
   return (
     <ReactLenis root>
       <div className="page">
@@ -20,7 +71,12 @@ const page = () => {
             <div className="project-banner-img">
               <ParallaxImage src="/projects/project-banner-1.jpg" alt="" />
               <div className="project-title">
-                <h1>Project Name</h1>
+                <a
+                  href="/project"
+                  onClick={(e) => handleNavigation(e, "/project")}
+                >
+                  <h1>Project Name</h1>
+                </a>
               </div>
             </div>
           </div>
@@ -28,7 +84,12 @@ const page = () => {
             <div className="project-banner-img">
               <ParallaxImage src="/projects/project-banner-2.jpg" alt="" />
               <div className="project-title">
-                <h1>Project Name</h1>
+                <a
+                  href="/project"
+                  onClick={(e) => handleNavigation(e, "/project")}
+                >
+                  <h1>Project Name</h1>
+                </a>
               </div>
             </div>
           </div>
@@ -36,7 +97,12 @@ const page = () => {
             <div className="project-banner-img">
               <ParallaxImage src="/projects/project-banner-3.jpg" alt="" />
               <div className="project-title">
-                <h1>Project Name</h1>
+                <a
+                  href="/project"
+                  onClick={(e) => handleNavigation(e, "/project")}
+                >
+                  <h1>Project Name</h1>
+                </a>
               </div>
             </div>
           </div>
@@ -44,7 +110,12 @@ const page = () => {
             <div className="project-banner-img">
               <ParallaxImage src="/projects/project-banner-4.jpg" alt="" />
               <div className="project-title">
-                <h1>Project Name</h1>
+                <a
+                  href="/project"
+                  onClick={(e) => handleNavigation(e, "/project")}
+                >
+                  <h1>Project Name</h1>
+                </a>
               </div>
             </div>
           </div>
@@ -52,7 +123,12 @@ const page = () => {
             <div className="project-banner-img">
               <ParallaxImage src="/projects/project-banner-5.jpg" alt="" />
               <div className="project-title">
-                <h1>Project Name</h1>
+                <a
+                  href="/project"
+                  onClick={(e) => handleNavigation(e, "/project")}
+                >
+                  <h1>Project Name</h1>
+                </a>
               </div>
             </div>
           </div>
@@ -60,7 +136,12 @@ const page = () => {
             <div className="project-banner-img">
               <ParallaxImage src="/projects/project-banner-6.jpg" alt="" />
               <div className="project-title">
-                <h1>Project Name</h1>
+                <a
+                  href="/project"
+                  onClick={(e) => handleNavigation(e, "/project")}
+                >
+                  <h1>Project Name</h1>
+                </a>
               </div>
             </div>
           </div>
@@ -68,15 +149,14 @@ const page = () => {
             <div className="project-banner-img">
               <ParallaxImage src="/projects/project-banner-7.jpg" alt="" />
               <div className="project-title">
-                <h1>Project Name</h1>
+                <a
+                  href="/project"
+                  onClick={(e) => handleNavigation(e, "/project")}
+                >
+                  <h1>Project Name</h1>
+                </a>
               </div>
             </div>
-          </div>
-        </section>
-
-        <section className="projects-outro">
-          <div className="container">
-            <h1>Load More</h1>
           </div>
         </section>
       </div>
@@ -84,4 +164,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
