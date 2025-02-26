@@ -152,7 +152,7 @@ section.expertise {
 
   .about-tagline {
     position: relative;
-    top: -10rem;
+    top: 0rem;
     width: 100vw;
     flex-direction: column;
     gap: 1em;
@@ -165,10 +165,6 @@ section.expertise {
   .expertise-header .container {
     justify-content: flex-start;
     gap: 2em;
-  }
-
-  .expertise-header {
-    height: max-content;
   }
 
   .expertise-img-1 {

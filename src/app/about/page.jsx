@@ -164,7 +164,7 @@ const page = () => {
             <div className="container">
               <div className="row">
                 <h1>
-                  What we <br /> do the best
+                  What we <br /> do best
                 </h1>
 
                 <div className="expertise-img-1">
