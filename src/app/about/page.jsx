@@ -7,6 +7,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
+import Footer from "../components/Footer/Footer";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const page = () => {
@@ -380,6 +382,8 @@ const page = () => {
             </div>
           </div>
         </section>
+
+        <Footer />
       </div>
     </ReactLenis>
   );

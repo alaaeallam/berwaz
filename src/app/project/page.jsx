@@ -3,6 +3,8 @@ import "./project.css";
 
 import ReactLenis from "@studio-freight/react-lenis";
 
+import Footer from "../components/Footer/Footer";
+
 const page = () => {
   return (
     <ReactLenis root>
@@ -193,6 +195,8 @@ const page = () => {
             </div>
           </div>
         </section>
+
+        <Footer />
       </div>
     </ReactLenis>
   );

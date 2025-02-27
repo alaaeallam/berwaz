@@ -3,6 +3,8 @@ import "./contact.css";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { useState, useEffect } from "react";
 
+import Footer from "../components/Footer/Footer";
+
 const Page = () => {
   const [nyTime, setNyTime] = useState("--:-- AM EST");
   const [tokyoTime, setTokyoTime] = useState("--:-- AM JST");
@@ -107,6 +109,8 @@ const Page = () => {
           </div>
         </section>
       </div>
+
+      <Footer />
     </ReactLenis>
   );
 };

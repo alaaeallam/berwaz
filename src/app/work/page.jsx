@@ -5,6 +5,8 @@ import { ReactLenis } from "@studio-freight/react-lenis";
 import ParallaxImage from "../components/ParallaxImage/ParallaxImage";
 import { useTransitionRouter } from "next-view-transitions";
 
+import Footer from "../components/Footer/Footer";
+
 const Page = () => {
   const router = useTransitionRouter();
 
@@ -124,6 +126,8 @@ const Page = () => {
             </div>
           ))}
         </section>
+
+        <Footer />
       </div>
     </ReactLenis>
   );
