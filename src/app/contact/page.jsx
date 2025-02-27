@@ -1,11 +1,12 @@
 "use client";
 import "./contact.css";
-import { ReactLenis } from "@studio-freight/react-lenis";
 import { useState, useEffect } from "react";
 
 import AnimatedH1 from "../components/AnimatedH1/AnimatedH1";
 import ParallaxImage from "../components/ParallaxImage/ParallaxImage";
 import Footer from "../components/Footer/Footer";
+
+import { ReactLenis } from "@studio-freight/react-lenis";
 
 const Page = () => {
   const [nyTime, setNyTime] = useState("--:-- AM EST");

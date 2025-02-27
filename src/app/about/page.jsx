@@ -1,16 +1,15 @@
 "use client";
 import "./about.css";
 
-import { ReactLenis } from "@studio-freight/react-lenis";
 import { useEffect, useRef, useState } from "react";
+import AnimatedH1 from "../components/AnimatedH1/AnimatedH1";
+import ParallaxImage from "../components/ParallaxImage/ParallaxImage";
+import Footer from "../components/Footer/Footer";
+
+import { ReactLenis } from "@studio-freight/react-lenis";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import AnimatedH1 from "../components/AnimatedH1/AnimatedH1";
-
-import ParallaxImage from "../components/ParallaxImage/ParallaxImage";
-
-import Footer from "../components/Footer/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 

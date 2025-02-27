@@ -1,10 +1,11 @@
 "use client";
 import "./Footer.css";
 import { useEffect, useRef } from "react";
-import SplitType from "split-type";
+
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitType from "split-type";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 

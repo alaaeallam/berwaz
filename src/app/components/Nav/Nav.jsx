@@ -2,10 +2,9 @@
 import "./Nav.css";
 import { useEffect, useRef } from "react";
 
-import { useTransitionRouter } from "next-view-transitions";
-
 import gsap from "gsap";
 import CustomEase from "gsap/dist/CustomEase";
+import { useTransitionRouter } from "next-view-transitions";
 
 const Nav = () => {
   const router = useTransitionRouter();

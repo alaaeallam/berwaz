@@ -1,6 +1,6 @@
 "use client";
-
 import React, { useRef, useEffect, useState } from "react";
+
 import { useLenis } from "@studio-freight/react-lenis";
 
 const lerp = (start, end, factor) => start + (end - start) * factor;
@@ -14,18 +14,14 @@ const ParallaxImage = ({ src, alt, speed = 0.3 }) => {
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    // Check if window is defined (client-side)
     if (typeof window === "undefined") return;
 
-    // Initial check for screen size
     const checkScreenSize = () => {
       setIsDesktop(window.innerWidth >= 900);
     };
 
-    // Run initial check
     checkScreenSize();
 
-    // Set up resize listener
     window.addEventListener("resize", checkScreenSize);
 
     return () => {
@@ -34,7 +30,6 @@ const ParallaxImage = ({ src, alt, speed = 0.3 }) => {
   }, []);
 
   useEffect(() => {
-    // Only run parallax logic if on desktop
     if (!isDesktop) return;
 
     const updateBounds = () => {
@@ -79,7 +74,6 @@ const ParallaxImage = ({ src, alt, speed = 0.3 }) => {
   }, [isDesktop]);
 
   useLenis(({ scroll }) => {
-    // Skip calculation if not on desktop
     if (!isDesktop || !bounds.current) return;
 
     const windowHeight = window.innerHeight;

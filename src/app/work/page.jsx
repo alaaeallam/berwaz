@@ -1,12 +1,12 @@
 "use client";
-
 import "./work.css";
-import { ReactLenis } from "@studio-freight/react-lenis";
-import ParallaxImage from "../components/ParallaxImage/ParallaxImage";
-import { useTransitionRouter } from "next-view-transitions";
-import AnimatedH1 from "../components/AnimatedH1/AnimatedH1";
 
+import AnimatedH1 from "../components/AnimatedH1/AnimatedH1";
+import ParallaxImage from "../components/ParallaxImage/ParallaxImage";
 import Footer from "../components/Footer/Footer";
+
+import { ReactLenis } from "@studio-freight/react-lenis";
+import { useTransitionRouter } from "next-view-transitions";
 
 const Page = () => {
   const router = useTransitionRouter();

@@ -1,11 +1,13 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import SplitType from "split-type";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
-gsap.registerPlugin(useGSAP, ScrollTrigger);
 import "./AnimatedH1.css";
+import { useEffect, useRef, useState } from "react";
+
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitType from "split-type";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const AnimatedH1 = ({
   children,

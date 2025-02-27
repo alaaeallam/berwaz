@@ -1,5 +1,6 @@
 "use client";
 import "./index.css";
+
 import AnimatedH1 from "./components/AnimatedH1/AnimatedH1";
 
 export default function Home() {

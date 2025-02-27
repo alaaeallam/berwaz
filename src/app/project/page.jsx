@@ -1,11 +1,11 @@
 "use client";
 import "./project.css";
 
-import ReactLenis from "@studio-freight/react-lenis";
 import ParallaxImage from "../components/ParallaxImage/ParallaxImage";
-
 import AnimatedH1 from "../components/AnimatedH1/AnimatedH1";
 import Footer from "../components/Footer/Footer";
+
+import ReactLenis from "@studio-freight/react-lenis";
 
 const page = () => {
   return (
