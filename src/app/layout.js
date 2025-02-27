@@ -5,7 +5,7 @@ import Nav from "./components/Nav/Nav";
 import { ViewTransitions } from "next-view-transitions";
 
 export const metadata = {
-  title: "ISOChrome",
+  title: "ISOChrome | MWT by Codegrid",
   description: "MWT by Codegrid",
 };
 
