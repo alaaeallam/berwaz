@@ -9,6 +9,9 @@ import CustomEase from "gsap/dist/CustomEase";
 
 const Nav = () => {
   const router = useTransitionRouter();
+  const pathname =
+    typeof window !== "undefined" ? window.location.pathname : "/";
+
   const navRef = useRef(null);
   const menuOverlayRef = useRef(null);
   const menuOverlayBarRef = useRef(null);
@@ -222,6 +225,14 @@ const Nav = () => {
 
   const handleNavigation = (e, path) => {
     e.preventDefault();
+
+    const currentPath =
+      typeof window !== "undefined" ? window.location.pathname : "/";
+
+    if (currentPath === path) {
+      handleCloseMenu();
+      return;
+    }
 
     handleCloseMenu();
 
