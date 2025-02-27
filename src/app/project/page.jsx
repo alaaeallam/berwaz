@@ -2,6 +2,7 @@
 import "./project.css";
 
 import ReactLenis from "@studio-freight/react-lenis";
+import ParallaxImage from "../components/ParallaxImage/ParallaxImage";
 
 import Footer from "../components/Footer/Footer";
 
@@ -12,7 +13,13 @@ const page = () => {
         <section className="project-hero">
           <div className="col">
             <div className="project-hero-img">
-              <img src="/project/project-img-1.jpg" alt="" />
+              <div className="project-hero-img-wrapper">
+                <ParallaxImage
+                  src="/project/project-img-1.jpg"
+                  alt=""
+                  speed={0.2}
+                />
+              </div>
             </div>
           </div>
           <div className="col">
@@ -89,7 +96,13 @@ const page = () => {
             <div className="col"></div>
             <div className="col">
               <div className="project-info-img-1">
-                <img src="/project/project-img-2.jpg" alt="" />
+                <div className="project-info-img-1-wrapper">
+                  <ParallaxImage
+                    src="/project/project-img-2.jpg"
+                    alt=""
+                    speed={0.2}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -159,7 +172,11 @@ const page = () => {
 
         <section className="project-preview-img">
           <div className="project-preview-img-wrapper">
-            <img src="/project/project-img-3.jpg" alt="" />
+            <ParallaxImage
+              src="/project/project-img-3.jpg"
+              alt=""
+              speed={0.2}
+            />
           </div>
         </section>
 

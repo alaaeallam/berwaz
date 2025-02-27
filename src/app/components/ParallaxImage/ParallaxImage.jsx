@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useLenis } from "@studio-freight/react-lenis";
 
 const lerp = (start, end, factor) => start + (end - start) * factor;
@@ -11,8 +11,32 @@ const ParallaxImage = ({ src, alt, speed = 0.3 }) => {
   const currentTranslateY = useRef(0);
   const targetTranslateY = useRef(0);
   const rafId = useRef(null);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
+    // Check if window is defined (client-side)
+    if (typeof window === "undefined") return;
+
+    // Initial check for screen size
+    const checkScreenSize = () => {
+      setIsDesktop(window.innerWidth >= 900);
+    };
+
+    // Run initial check
+    checkScreenSize();
+
+    // Set up resize listener
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Only run parallax logic if on desktop
+    if (!isDesktop) return;
+
     const updateBounds = () => {
       if (imageRef.current) {
         const rect = imageRef.current.getBoundingClientRect();
@@ -52,10 +76,11 @@ const ParallaxImage = ({ src, alt, speed = 0.3 }) => {
         cancelAnimationFrame(rafId.current);
       }
     };
-  }, []);
+  }, [isDesktop]);
 
   useLenis(({ scroll }) => {
-    if (!bounds.current) return;
+    // Skip calculation if not on desktop
+    if (!isDesktop || !bounds.current) return;
 
     const windowHeight = window.innerHeight;
     const elementMiddle = bounds.current.top + bounds.current.height / 2;
@@ -74,8 +99,8 @@ const ParallaxImage = ({ src, alt, speed = 0.3 }) => {
         width: "100%",
         height: "100%",
         objectFit: "cover",
-        willChange: "transform",
-        transform: "translateY(0) scale(1.5)",
+        willChange: isDesktop ? "transform" : "auto",
+        transform: isDesktop ? "translateY(0) scale(1.5)" : "none",
         position: "absolute",
         top: 0,
         left: 0,

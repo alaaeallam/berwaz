@@ -3,6 +3,7 @@ import "./contact.css";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { useState, useEffect } from "react";
 
+import ParallaxImage from "../components/ParallaxImage/ParallaxImage";
 import Footer from "../components/Footer/Footer";
 
 const Page = () => {
@@ -101,7 +102,7 @@ const Page = () => {
 
         <section className="contact-banner">
           <div className="contact-banner-bg">
-            <img src="/contact/banner.jpg" alt="" />
+            <ParallaxImage src="/contact/banner.jpg" alt="" speed={0.2} />
           </div>
 
           <div className="contact-banner-cta">

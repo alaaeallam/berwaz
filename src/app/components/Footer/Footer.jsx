@@ -16,8 +16,8 @@ const Footer = () => {
           <div className="col">
             <div className="row">
               <div className="footer-socials">
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
+                <a href="https://www.instagram.com/codegridweb/">Instagram</a>
+                <a href="https://x.com/codegridweb">Twitter</a>
               </div>
 
               <div className="langs">

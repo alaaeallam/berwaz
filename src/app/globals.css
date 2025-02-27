@@ -125,7 +125,7 @@ h3 {
   text-transform: uppercase;
   font-family: "dm";
   font-weight: lighter;
-  font-size: 2.5vw;
+  font-size: 2.25vw;
   line-height: 0.85;
   color: var(--copy);
   will-change: transform;

@@ -7,9 +7,30 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
+import ParallaxImage from "../components/ParallaxImage/ParallaxImage";
+
 import Footer from "../components/Footer/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const clientBrands = [
+  "Meridian",
+  "Hexal",
+  "Synergy",
+  "Harmony",
+  "Octa",
+  "Constellation",
+  "Aperture",
+  "Flux",
+  "Bloom",
+  "Spectrum",
+  "Equinox",
+  "Horizon",
+  "Element",
+  "Stratos",
+  "Vanguard",
+  "Echo",
+];
 
 const page = () => {
   const container = useRef();
@@ -152,10 +173,13 @@ const page = () => {
               </p>
 
               <div className="about-copy-img">
-                <img
-                  src="/about/about-copy.jpg"
-                  alt="ISOChrome Creative Team at Work"
-                />
+                <div className="about-copy-img-wrapper">
+                  <ParallaxImage
+                    src="/about/about-copy.jpg"
+                    alt="ISOChrome Creative Team at Work"
+                    speed={0.2}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -235,23 +259,23 @@ const page = () => {
 
         <section className="about-outro-banner">
           <div className="about-outro-img">
-            <img src="/about/about-outro.jpg" alt="" />
+            <ParallaxImage src="/about/about-outro.jpg" alt="" speed={0.2} />
           </div>
         </section>
 
         <section className="founder-voice">
           <div className="container">
             <h2>
-              "ISOChrome is a trailblazer in influencer marketing, connecting
-              brands with influential voices across social media to build
-              impactful messages.”
+              "ISOChrome revolutionizes influencer marketing by seamlessly
+              connecting brands with powerful voices across social media,
+              crafting narratives that leave a lasting impact.”
             </h2>
 
             <div className="founder-image">
-              <img src="/about/expertise-img-1.jpg" alt="" />
+              <img src="/about/founder.jpg" alt="" />
             </div>
             <div className="founter-info">
-              <p>Kristina Argento</p>
+              <p>Alvah Jehohanan</p>
               <p>Founder</p>
             </div>
           </div>
@@ -260,125 +284,20 @@ const page = () => {
         <section className="client-logos">
           <div className="container">
             <div className="logos-grid">
-              <div className="logo-item">
-                <div className="logo-details">
-                  <p>&#9632;</p>
-                  <p>Logo Name</p>
+              {clientBrands.map((brand, index) => (
+                <div className="logo-item" key={index}>
+                  <div className="logo-details">
+                    <p>&#9632;</p>
+                    <p>{brand}</p>
+                  </div>
+                  <img
+                    src={`/client-logos/${String.fromCharCode(
+                      65 + Math.floor(index / 2)
+                    )}${(index % 2) + 1}.png`}
+                    alt={`${brand} logo`}
+                  />
                 </div>
-                <img src="/client-logos/A1.png" alt="Client Logo A1" />
-              </div>
-              <div className="logo-item">
-                <div className="logo-details">
-                  <p>&#9632;</p>
-                  <p>Logo Name</p>
-                </div>
-                <img src="/client-logos/A2.png" alt="Client Logo A2" />
-              </div>
-              <div className="logo-item">
-                <div className="logo-details">
-                  <p>&#9632;</p>
-                  <p>Logo Name</p>
-                </div>
-                <img src="/client-logos/B1.png" alt="Client Logo A3" />
-              </div>
-              <div className="logo-item">
-                <div className="logo-details">
-                  <p>&#9632;</p>
-                  <p>Logo Name</p>
-                </div>
-                <img src="/client-logos/B2.png" alt="Client Logo A4" />
-              </div>
-              <div className="logo-item">
-                <div className="logo-details">
-                  <p>&#9632;</p>
-                  <p>Logo Name</p>
-                </div>
-                <img src="/client-logos/C1.png" alt="Client Logo B1" />
-              </div>
-              <div className="logo-item">
-                <div className="logo-details">
-                  <p>&#9632;</p>
-                  <p>Logo Name</p>
-                </div>
-                <img src="/client-logos/C2.png" alt="Client Logo B2" />
-              </div>
-              <div className="logo-item">
-                <div className="logo-details">
-                  <p>&#9632;</p>
-                  <p>Logo Name</p>
-                </div>
-                <img src="/client-logos/D1.png" alt="Client Logo B3" />
-              </div>
-              <div className="logo-item">
-                <div className="logo-details">
-                  <p>&#9632;</p>
-                  <p>Logo Name</p>
-                </div>
-                <img src="/client-logos/D2.png" alt="Client Logo B4" />
-              </div>
-              <div className="logo-item">
-                <div className="logo-details">
-                  <p>&#9632;</p>
-                  <p>Logo Name</p>
-                </div>
-                <img src="/client-logos/E1.png" alt="Client Logo C1" />
-              </div>
-              <div className="logo-item">
-                {" "}
-                <div className="logo-details">
-                  <p>&#9632;</p>
-                  <p>Logo Name</p>
-                </div>
-                <img src="/client-logos/E2.png" alt="Client Logo C2" />
-              </div>
-              <div className="logo-item">
-                {" "}
-                <div className="logo-details">
-                  <p>&#9632;</p>
-                  <p>Logo Name</p>
-                </div>
-                <img src="/client-logos/F1.png" alt="Client Logo C3" />
-              </div>
-              <div className="logo-item">
-                {" "}
-                <div className="logo-details">
-                  <p>&#9632;</p>
-                  <p>Logo Name</p>
-                </div>
-                <img src="/client-logos/F2.png" alt="Client Logo C4" />
-              </div>
-              <div className="logo-item">
-                {" "}
-                <div className="logo-details">
-                  <p>&#9632;</p>
-                  <p>Logo Name</p>
-                </div>
-                <img src="/client-logos/G1.png" alt="Client Logo D1" />
-              </div>
-              <div className="logo-item">
-                {" "}
-                <div className="logo-details">
-                  <p>&#9632;</p>
-                  <p>Logo Name</p>
-                </div>
-                <img src="/client-logos/G2.png" alt="Client Logo D2" />
-              </div>
-              <div className="logo-item">
-                {" "}
-                <div className="logo-details">
-                  <p>&#9632;</p>
-                  <p>Logo Name</p>
-                </div>
-                <img src="/client-logos/H1.png" alt="Client Logo D3" />
-              </div>
-              <div className="logo-item">
-                {" "}
-                <div className="logo-details">
-                  <p>&#9632;</p>
-                  <p>Logo Name</p>
-                </div>
-                <img src="/client-logos/H2.png" alt="Client Logo D4" />
-              </div>
+              ))}
             </div>
           </div>
         </section>
