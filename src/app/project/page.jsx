@@ -1,8 +1,9 @@
 "use client";
 import "./project.css";
 
-import ParallaxImage from "../components/ParallaxImage/ParallaxImage";
 import AnimatedH1 from "../components/AnimatedH1/AnimatedH1";
+import AnimatedCopy from "../components/AnimatedCopy/AnimatedCopy";
+import ParallaxImage from "../components/ParallaxImage/ParallaxImage";
 import Footer from "../components/Footer/Footer";
 
 import ReactLenis from "@studio-freight/react-lenis";
@@ -30,22 +31,30 @@ const page = () => {
               </div>
               <div className="row">
                 <div className="sub-col">
-                  <p>Client</p>
-                  <h3>Northstar Co.</h3>
+                  <AnimatedCopy delay={1.125} animateOnScroll={false}>
+                    Client
+                  </AnimatedCopy>
+                  <AnimatedCopy delay={1.25} tag="h3" animateOnScroll={false}>
+                    Northstar Co.
+                  </AnimatedCopy>
                 </div>
                 <div className="sub-col">
-                  <p>Services</p>
-                  <h3>Content Creation</h3>
+                  <AnimatedCopy delay={1.125} animateOnScroll={false}>
+                    Services
+                  </AnimatedCopy>
+                  <AnimatedCopy delay={1.25} tag="h3" animateOnScroll={false}>
+                    Content Creation
+                  </AnimatedCopy>
                 </div>
               </div>
               <div className="row">
                 <div className="sub-col"></div>
                 <div className="sub-col">
-                  <p>
+                  <AnimatedCopy delay={1.5}>
                     Through collaborative strategy and innovative digital
                     solutions, we helped Northstar establish a stronger online
                     presence.
-                  </p>
+                  </AnimatedCopy>
                 </div>
               </div>
             </div>
@@ -55,19 +64,19 @@ const page = () => {
         <section className="project-info">
           <div className="container">
             <div className="col">
-              <h3>Summary</h3>
+              <AnimatedCopy tag="h3">Summary</AnimatedCopy>
             </div>
             <div className="col">
-              <p>
+              <AnimatedCopy>
                 Pulse Digital partnered with Northstar Innovations to develop a
                 comprehensive interactive campaign that would strengthen their
                 market position and expand their digital footprint. The project
                 focused on creating engaging, conversion-driven content that
                 resonated with their target audience while maintaining brand
                 consistency across all platforms.
-              </p>
+              </AnimatedCopy>
 
-              <p>
+              <AnimatedCopy delay={0.15}>
                 Our strategy involved a multi-channel approach combining social
                 media optimization, content marketing, and targeted digital
                 advertising. We developed custom graphics, interactive elements,
@@ -76,9 +85,9 @@ const page = () => {
                 elements that adapted seamlessly to different devices, ensuring
                 a consistent user experience regardless of how customers
                 accessed the content.
-              </p>
+              </AnimatedCopy>
 
-              <p>
+              <AnimatedCopy delay={0.3}>
                 The results exceeded initial projections, with Northstar
                 experiencing a 38% increase in qualified leads and 42% growth in
                 social media engagement. Website traffic from organic searches
@@ -87,7 +96,7 @@ const page = () => {
                 digital marketing can transform brand perception and drive
                 meaningful business outcomes when executed with creativity and
                 precision.
-              </p>
+              </AnimatedCopy>
             </div>
           </div>
         </section>
@@ -112,10 +121,10 @@ const page = () => {
         <section className="project-info">
           <div className="container">
             <div className="col">
-              <h3>Strategy</h3>
+              <AnimatedCopy tag="h3">Strategy</AnimatedCopy>
             </div>
             <div className="col">
-              <p>
+              <AnimatedCopy>
                 We implemented a strategic multi-platform approach for Pulse
                 Digital's campaign, beginning with comprehensive audience
                 analysis to identify key engagement opportunities. Our tactics
@@ -127,7 +136,7 @@ const page = () => {
                 interactive website elements that encouraged visitor
                 participation while collecting valuable user data to
                 continuously refine our targeting strategy.
-              </p>
+              </AnimatedCopy>
             </div>
           </div>
         </section>
@@ -135,7 +144,7 @@ const page = () => {
         <section className="project-info">
           <div className="container">
             <div className="col">
-              <h3>Campaign Performance</h3>
+              <AnimatedCopy tag="h3">Campaign Performance</AnimatedCopy>
             </div>
             <div className="col">
               <div className="stat">
@@ -196,10 +205,10 @@ const page = () => {
         <section className="project-info project-info-outro">
           <div className="container">
             <div className="col">
-              <h3>Execution</h3>
+              <AnimatedCopy tag="h3">Execution</AnimatedCopy>
             </div>
             <div className="col">
-              <p>
+              <AnimatedCopy>
                 For the Pulse Digital campaign, we implemented a multi-faceted
                 digital strategy centered on audience engagement and conversion
                 optimization. Our team developed custom-designed interactive
@@ -209,9 +218,9 @@ const page = () => {
                 insights to identify peak engagement windows and adjusted
                 content delivery accordingly, ensuring maximum visibility within
                 the target demographic.
-              </p>
+              </AnimatedCopy>
 
-              <p>
+              <AnimatedCopy delay={0.15}>
                 Content creation focused on storytelling that highlighted
                 Northstar's unique value proposition while addressing specific
                 pain points identified through customer research. We deployed
@@ -221,7 +230,7 @@ const page = () => {
                 quickly in response to engagement metrics, maximizing campaign
                 effectiveness through continuous optimization throughout the
                 project lifecycle.
-              </p>
+              </AnimatedCopy>
             </div>
           </div>
         </section>

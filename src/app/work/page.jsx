@@ -2,6 +2,7 @@
 import "./work.css";
 
 import AnimatedH1 from "../components/AnimatedH1/AnimatedH1";
+import AnimatedCopy from "../components/AnimatedCopy/AnimatedCopy";
 import ParallaxImage from "../components/ParallaxImage/ParallaxImage";
 import Footer from "../components/Footer/Footer";
 
@@ -103,10 +104,10 @@ const Page = () => {
         <section className="work-hero">
           <div className="container">
             <AnimatedH1 delay={1}>From vision to victory</AnimatedH1>
-            <p>
+            <AnimatedCopy delay={1.2} animateOnScroll={false}>
               Elevating digital marketing excellence through strategic
               innovation
-            </p>
+            </AnimatedCopy>
           </div>
         </section>
 

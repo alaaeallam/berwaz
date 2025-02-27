@@ -3,6 +3,7 @@ import "./contact.css";
 import { useState, useEffect } from "react";
 
 import AnimatedH1 from "../components/AnimatedH1/AnimatedH1";
+import AnimatedCopy from "../components/AnimatedCopy/AnimatedCopy";
 import ParallaxImage from "../components/ParallaxImage/ParallaxImage";
 import Footer from "../components/Footer/Footer";
 
@@ -56,46 +57,46 @@ const Page = () => {
           <div className="container">
             <div className="row">
               <div className="col">
-                <p>Let's Build</p>
+                <AnimatedCopy>Let's Build</AnimatedCopy>
               </div>
               <div className="col">
                 <div className="sub-col">
-                  <p>New Collaborations</p>
-                  <p>hello@isochrome.io</p>
+                  <AnimatedCopy>New Collaborations</AnimatedCopy>
+                  <AnimatedCopy>hello@isochrome.io</AnimatedCopy>
                 </div>
                 <div className="sub-col">
-                  <p>Join ISOChrome</p>
-                  <p>jobs@isochrome.io</p>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col">
-                <p>New York</p>
-              </div>
-              <div className="col">
-                <div className="sub-col">
-                  <p>245 Fifth Avenue</p>
-                  <p>New York, NY 10016</p>
-                  <p>USA</p>
-                </div>
-                <div className="sub-col">
-                  <p>{nyTime}</p>
+                  <AnimatedCopy>Join ISOChrome</AnimatedCopy>
+                  <AnimatedCopy>jobs@isochrome.io</AnimatedCopy>
                 </div>
               </div>
             </div>
             <div className="row">
               <div className="col">
-                <p>Tokyo</p>
+                <AnimatedCopy>New York</AnimatedCopy>
               </div>
               <div className="col">
                 <div className="sub-col">
-                  <p>3-5-7 Ginza</p>
-                  <p>Chuo-ku, Tokyo 104-0061</p>
-                  <p>Japan</p>
+                  <AnimatedCopy>245 Fifth Avenue</AnimatedCopy>
+                  <AnimatedCopy>New York, NY 10016</AnimatedCopy>
+                  <AnimatedCopy>USA</AnimatedCopy>
                 </div>
                 <div className="sub-col">
-                  <p>{tokyoTime}</p>
+                  <AnimatedCopy>{nyTime}</AnimatedCopy>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col">
+                <AnimatedCopy>Tokyo</AnimatedCopy>
+              </div>
+              <div className="col">
+                <div className="sub-col">
+                  <AnimatedCopy>3-5-7 Ginza</AnimatedCopy>
+                  <AnimatedCopy>Chuo-ku, Tokyo 104-0061</AnimatedCopy>
+                  <AnimatedCopy>Japan</AnimatedCopy>
+                </div>
+                <div className="sub-col">
+                  <AnimatedCopy>{tokyoTime}</AnimatedCopy>
                 </div>
               </div>
             </div>

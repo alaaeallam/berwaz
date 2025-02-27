@@ -1,8 +1,9 @@
 "use client";
 import "./about.css";
-
 import { useEffect, useRef, useState } from "react";
+
 import AnimatedH1 from "../components/AnimatedH1/AnimatedH1";
+import AnimatedCopy from "../components/AnimatedCopy/AnimatedCopy";
 import ParallaxImage from "../components/ParallaxImage/ParallaxImage";
 import Footer from "../components/Footer/Footer";
 
@@ -116,13 +117,15 @@ const page = () => {
 
             <div className="about-tagline">
               <div className="col">
-                <p>Who We Are</p>
+                <AnimatedCopy delay={1} animateOnScroll={false}>
+                  Who We Are
+                </AnimatedCopy>
               </div>
               <div className="col">
-                <p>
+                <AnimatedCopy delay={1} animateOnScroll={false}>
                   Where strategy meets storytelling—crafting bold, unforgettable
                   brand experiences.
-                </p>
+                </AnimatedCopy>
               </div>
             </div>
             <AnimatedH1 delay={1.2}>with Vision and Innovation</AnimatedH1>
@@ -131,10 +134,10 @@ const page = () => {
 
         <section className="about-copy">
           <div className="container">
-            <h2>The Origin</h2>
+            <AnimatedCopy tag="h2">The Origin</AnimatedCopy>
 
             <div className="about-copy-wrapper">
-              <p>
+              <AnimatedCopy>
                 ISOChrome is more than a creative agency—we are storytellers,
                 strategists, and visionaries dedicated to redefining brand
                 communication. We craft experiences that go beyond visuals,
@@ -145,9 +148,9 @@ const page = () => {
                 execution, we ensure that every campaign is crafted with
                 precision and passion. We don’t just create content—we engineer
                 experiences that inspire engagement and action.
-              </p>
+              </AnimatedCopy>
 
-              <p>
+              <AnimatedCopy delay={0.25}>
                 Our approach is built on innovation, ensuring every project is
                 fresh, dynamic, and purpose-driven. Whether it's **brand
                 strategy, influencer collaborations, or digital campaigns**, we
@@ -159,9 +162,9 @@ const page = () => {
                 closely with our clients, we align our creative strategies with
                 their business objectives, ensuring that every campaign is
                 tailored to meet their unique goals.
-              </p>
+              </AnimatedCopy>
 
-              <p>
+              <AnimatedCopy delay={0.5}>
                 At ISOChrome, we push boundaries, challenge conventions, and
                 shape the future of branding. With every campaign, we aim to
                 turn ideas into movements, transforming how brands interact with
@@ -170,7 +173,7 @@ const page = () => {
                 innovation that goes beyond the expected. As pioneers in the
                 creative space, we thrive on experimentation and fearless
                 execution.
-              </p>
+              </AnimatedCopy>
 
               <div className="about-copy-img">
                 <div className="about-copy-img-wrapper">
@@ -209,49 +212,49 @@ const page = () => {
             <div className="col"></div>
             <div className="col">
               <div className="service">
-                <h3>(01)</h3>
-                <h2>Brand Strategy</h2>
-                <p>01 Market Research & Insights</p>
-                <p>02 Positioning & Differentiation</p>
-                <p>03 Audience Analysis</p>
-                <p>04 Messaging Framework</p>
-                <p>05 Long-Term Growth Planning</p>
+                <AnimatedCopy tag="h3">(01)</AnimatedCopy>
+                <AnimatedCopy tag="h2">Brand Strategy</AnimatedCopy>
+                <AnimatedCopy>01 Market Research & Insights</AnimatedCopy>
+                <AnimatedCopy>02 Positioning & Differentiation</AnimatedCopy>
+                <AnimatedCopy>03 Audience Analysis</AnimatedCopy>
+                <AnimatedCopy>04 Messaging Framework</AnimatedCopy>
+                <AnimatedCopy>05 Long-Term Growth Planning</AnimatedCopy>
               </div>
               <div className="service">
-                <h3>(02)</h3>
-                <h2>Visual Identity</h2>
-                <p>01 Logo & Brand Guidelines</p>
-                <p>02 Color Theory & Typography</p>
-                <p>03 Design Systems & Assets</p>
-                <p>04 Illustration & Iconography</p>
-                <p>05 Brand Voice & Personality</p>
+                <AnimatedCopy tag="h3">(02)</AnimatedCopy>
+                <AnimatedCopy tag="h2">Visual Identity</AnimatedCopy>
+                <AnimatedCopy>01 Logo & Brand Guidelines</AnimatedCopy>
+                <AnimatedCopy>02 Color Theory & Typography</AnimatedCopy>
+                <AnimatedCopy>03 Design Systems & Assets</AnimatedCopy>
+                <AnimatedCopy>04 Illustration & Iconography</AnimatedCopy>
+                <AnimatedCopy>05 Brand Voice & Personality</AnimatedCopy>
               </div>
               <div className="service">
-                <h3>(03)</h3>
-                <h2>Digital Experiences</h2>
-                <p>01 Web Design & Development</p>
-                <p>02 UI/UX & Interactive Design</p>
-                <p>03 Prototyping & Wireframing</p>
-                <p>04 Mobile & Web App Interfaces</p>
-                <p>05 Performance & Accessibility</p>
+                <AnimatedCopy tag="h3">(03)</AnimatedCopy>
+                <AnimatedCopy tag="h2">Digital Experiences</AnimatedCopy>
+                <AnimatedCopy>01 Web Design & Development</AnimatedCopy>
+                <AnimatedCopy>02 UI/UX & Interactive Design</AnimatedCopy>
+                <AnimatedCopy>03 Prototyping & Wireframing</AnimatedCopy>
+                <AnimatedCopy>04 Mobile & Web App Interfaces</AnimatedCopy>
+                <AnimatedCopy>05 Performance & Accessibility</AnimatedCopy>
               </div>
               <div className="service">
-                <h3>(04)</h3>
-                <h2>Content & Storytelling</h2>
-                <p>01 Creative Copywriting</p>
-                <p>02 Video & Motion Graphics</p>
-                <p>03 Social Media Campaigns</p>
-                <p>04 Content Strategy</p>
-                <p>05 Brand Narratives</p>
+                <AnimatedCopy tag="h3">(04)</AnimatedCopy>
+                <AnimatedCopy tag="h2">Content & Storytelling</AnimatedCopy>
+                <AnimatedCopy>01 Creative Copywriting</AnimatedCopy>
+                <AnimatedCopy>02 Video & Motion Graphics</AnimatedCopy>
+                <AnimatedCopy>03 Social Media Campaigns</AnimatedCopy>
+                <AnimatedCopy>04 Content Strategy</AnimatedCopy>
+                <AnimatedCopy>05 Brand Narratives</AnimatedCopy>
               </div>
               <div className="service">
-                <h3>(05)</h3>
-                <h2>Marketing & Growth</h2>
-                <p>01 SEO & Performance Optimization</p>
-                <p>02 Ad Campaigns & Paid Media</p>
-                <p>03 Email & CRM Strategies</p>
-                <p>04 Conversion Rate Optimization</p>
-                <p>05 Analytics & Insights</p>
+                <AnimatedCopy tag="h3">(05)</AnimatedCopy>
+                <AnimatedCopy tag="h2">Marketing & Growth</AnimatedCopy>
+                <AnimatedCopy>01 SEO & Performance Optimization</AnimatedCopy>
+                <AnimatedCopy>02 Ad Campaigns & Paid Media</AnimatedCopy>
+                <AnimatedCopy>03 Email & CRM Strategies</AnimatedCopy>
+                <AnimatedCopy>04 Conversion Rate Optimization</AnimatedCopy>
+                <AnimatedCopy>05 Analytics & Insights</AnimatedCopy>
               </div>
             </div>
           </div>
@@ -265,18 +268,18 @@ const page = () => {
 
         <section className="founder-voice">
           <div className="container">
-            <h2>
+            <AnimatedCopy tag="h2">
               "ISOChrome revolutionizes influencer marketing by seamlessly
               connecting brands with powerful voices across social media,
               crafting narratives that leave a lasting impact.”
-            </h2>
+            </AnimatedCopy>
 
             <div className="founder-image">
               <img src="/about/founder.jpg" alt="" />
             </div>
             <div className="founter-info">
-              <p>Alvah Jehohanan</p>
-              <p>Founder</p>
+              <AnimatedCopy>Alvah Jehohanan</AnimatedCopy>
+              <AnimatedCopy>Founder</AnimatedCopy>
             </div>
           </div>
         </section>
