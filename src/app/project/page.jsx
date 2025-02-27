@@ -142,42 +142,42 @@ const page = () => {
                 <AnimatedH1 animateOnScroll={true} direction="top">
                   97.4K
                 </AnimatedH1>
-                <span>Video Views</span>
+                <p>Video Views</p>
               </div>
 
               <div className="stat">
                 <AnimatedH1 animateOnScroll={true} direction="top">
                   3.8K
                 </AnimatedH1>
-                <span>Total Engagement</span>
+                <p>Total Engagement</p>
               </div>
 
               <div className="stat">
                 <AnimatedH1 animateOnScroll={true} direction="top">
                   45.6K
                 </AnimatedH1>
-                <span>Total Reach</span>
+                <p>Total Reach</p>
               </div>
 
               <div className="stat">
                 <AnimatedH1 animateOnScroll={true} direction="top">
                   512
                 </AnimatedH1>
-                <span>Conversions</span>
+                <p>Conversions</p>
               </div>
 
               <div className="stat">
                 <AnimatedH1 animateOnScroll={true} direction="top">
                   183.7K
                 </AnimatedH1>
-                <span>Impressions</span>
+                <p>Impressions</p>
               </div>
 
               <div className="stat">
                 <AnimatedH1 animateOnScroll={true} direction="top">
                   4.2K
                 </AnimatedH1>
-                <span>Interactions</span>
+                <p>Interactions</p>
               </div>
             </div>
           </div>
