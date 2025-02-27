@@ -1,5 +1,6 @@
 "use client";
 import "./index.css";
+import AnimatedH1 from "./components/AnimatedH1/AnimatedH1";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
         </div>
 
         <div className="hero-header">
-          <h1>Beyond the Frame, Into the Soul.</h1>
+          <AnimatedH1 delay={0.85}>Beyond the Frame, Into the Soul.</AnimatedH1>
         </div>
 
         <div className="hero-footer">

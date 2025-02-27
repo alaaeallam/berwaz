@@ -1,7 +1,55 @@
 "use client";
 import "./Footer.css";
+import { useEffect, useRef } from "react";
+import SplitType from "split-type";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Footer = () => {
+  const logoRef = useRef(null);
+
+  useGSAP(
+    () => {
+      if (!logoRef.current) return;
+
+      const text = new SplitType(logoRef.current, {
+        types: "chars",
+        charClass: "footer-logo-char",
+      });
+
+      gsap.set(".footer-logo-char", {
+        y: "100%",
+        display: "inline-block",
+      });
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: logoRef.current,
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        })
+        .to(".footer-logo-char", {
+          y: "0%",
+          stagger: 0.04,
+          duration: 0.8,
+          ease: "power2.out",
+        });
+
+      return () => {
+        if (text) text.revert();
+        ScrollTrigger.getAll()
+          .filter((st) => st.vars.trigger === logoRef.current)
+          .forEach((st) => st.kill());
+      };
+    },
+    { scope: logoRef }
+  );
+
   return (
     <div className="footer">
       <div className="container">
@@ -45,7 +93,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-logo">
-          <h1>ISOChrome</h1>
+          <h1 ref={logoRef}>ISOChrome</h1>
         </div>
 
         <div className="footer-copyright">

@@ -4,6 +4,7 @@ import "./work.css";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import ParallaxImage from "../components/ParallaxImage/ParallaxImage";
 import { useTransitionRouter } from "next-view-transitions";
+import AnimatedH1 from "../components/AnimatedH1/AnimatedH1";
 
 import Footer from "../components/Footer/Footer";
 
@@ -101,7 +102,7 @@ const Page = () => {
       <div className="page">
         <section className="work-hero">
           <div className="container">
-            <h1>From vision to victory</h1>
+            <AnimatedH1 delay={1}>From vision to victory</AnimatedH1>
             <p>
               Elevating digital marketing excellence through strategic
               innovation
@@ -119,7 +120,9 @@ const Page = () => {
                     href="/project"
                     onClick={(e) => handleNavigation(e, "/project")}
                   >
-                    <h1>{project.name}</h1>
+                    <AnimatedH1 animateOnScroll={true}>
+                      {project.name}
+                    </AnimatedH1>
                   </a>
                 </div>
               </div>

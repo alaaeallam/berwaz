@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import AnimatedH1 from "../components/AnimatedH1/AnimatedH1";
 
 import ParallaxImage from "../components/ParallaxImage/ParallaxImage";
 
@@ -112,7 +113,7 @@ const page = () => {
           </div>
 
           <div className="container">
-            <h1>Shaping the Future of Creativity</h1>
+            <AnimatedH1 delay={1}>Shaping the Future of Creativity</AnimatedH1>
 
             <div className="about-tagline">
               <div className="col">
@@ -125,7 +126,7 @@ const page = () => {
                 </p>
               </div>
             </div>
-            <h1>with Vision and Innovation</h1>
+            <AnimatedH1 delay={1.2}>with Vision and Innovation</AnimatedH1>
           </div>
         </section>
 
@@ -189,9 +190,9 @@ const page = () => {
           <div className="expertise-header">
             <div className="container">
               <div className="row">
-                <h1>
+                <AnimatedH1 animateOnScroll={true}>
                   What we <br /> do best
-                </h1>
+                </AnimatedH1>
 
                 <div className="expertise-img-1">
                   <img src="/about/expertise-img-1.jpg" alt="" />

@@ -3,6 +3,7 @@ import "./contact.css";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { useState, useEffect } from "react";
 
+import AnimatedH1 from "../components/AnimatedH1/AnimatedH1";
 import ParallaxImage from "../components/ParallaxImage/ParallaxImage";
 import Footer from "../components/Footer/Footer";
 
@@ -43,10 +44,10 @@ const Page = () => {
       <div className="page">
         <section className="contact-hero">
           <div className="container">
-            <h1>
+            <AnimatedH1 delay={0.85}>
               Collaborating with visionary brands, entrepreneurs, and investors
               to craft bold identities that inspire and leave a lasting mark.
-            </h1>
+            </AnimatedH1>
           </div>
         </section>
 
@@ -106,7 +107,7 @@ const Page = () => {
           </div>
 
           <div className="contact-banner-cta">
-            <h1>See our work</h1>
+            <AnimatedH1 animateOnScroll={true}>Let's build together</AnimatedH1>
           </div>
         </section>
       </div>

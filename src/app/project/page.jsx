@@ -4,6 +4,7 @@ import "./project.css";
 import ReactLenis from "@studio-freight/react-lenis";
 import ParallaxImage from "../components/ParallaxImage/ParallaxImage";
 
+import AnimatedH1 from "../components/AnimatedH1/AnimatedH1";
 import Footer from "../components/Footer/Footer";
 
 const page = () => {
@@ -25,7 +26,7 @@ const page = () => {
           <div className="col">
             <div className="container">
               <div className="project-page-title">
-                <h1>Pulse Interactive Digital</h1>
+                <AnimatedH1 delay={1}>Pulse Interactive Digital</AnimatedH1>
               </div>
               <div className="row">
                 <div className="sub-col">
@@ -138,32 +139,44 @@ const page = () => {
             </div>
             <div className="col">
               <div className="stat">
-                <h1>97.4K</h1>
+                <AnimatedH1 animateOnScroll={true} direction="top">
+                  97.4K
+                </AnimatedH1>
                 <span>Video Views</span>
               </div>
 
               <div className="stat">
-                <h1>3.8K</h1>
+                <AnimatedH1 animateOnScroll={true} direction="top">
+                  3.8K
+                </AnimatedH1>
                 <span>Total Engagement</span>
               </div>
 
               <div className="stat">
-                <h1>45.6K</h1>
+                <AnimatedH1 animateOnScroll={true} direction="top">
+                  45.6K
+                </AnimatedH1>
                 <span>Total Reach</span>
               </div>
 
               <div className="stat">
-                <h1>512</h1>
+                <AnimatedH1 animateOnScroll={true} direction="top">
+                  512
+                </AnimatedH1>
                 <span>Conversions</span>
               </div>
 
               <div className="stat">
-                <h1>183.7K</h1>
+                <AnimatedH1 animateOnScroll={true} direction="top">
+                  183.7K
+                </AnimatedH1>
                 <span>Impressions</span>
               </div>
 
               <div className="stat">
-                <h1>4.2K</h1>
+                <AnimatedH1 animateOnScroll={true} direction="top">
+                  4.2K
+                </AnimatedH1>
                 <span>Interactions</span>
               </div>
             </div>

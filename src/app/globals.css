@@ -88,8 +88,7 @@ img {
 }
 
 a,
-p,
-span {
+p {
   position: relative;
   text-decoration: none;
   text-transform: uppercase;

@@ -113,6 +113,17 @@
   text-align: center;
 }
 
+.footer-logo h1 {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  overflow: hidden;
+}
+
+.footer-logo-char {
+  position: relative;
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
 .footer-copyright {
   width: 100%;
   display: flex;
