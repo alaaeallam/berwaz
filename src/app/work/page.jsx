@@ -16,17 +16,17 @@ const Page = () => {
     {
       id: 1,
       name: "Horizon Branding",
-      imageUrl: "/projects/project-banner-1.jpg",
+      imageUrl: "/projects/IMG_5326.jpg",
     },
     {
       id: 2,
       name: "Pulse Digital",
-      imageUrl: "/projects/project-banner-2.jpg",
+      imageUrl: "/projects/IMG_5327.jpg",
     },
     {
       id: 3,
       name: "Elevate Studios",
-      imageUrl: "/projects/project-banner-3.jpg",
+      imageUrl: "/projects/IMG_5324.jpg",
     },
     {
       id: 4,
@@ -55,11 +55,11 @@ const Page = () => {
       [
         {
           opacity: 1,
-          transform: "translateY(0)",
+          transform: "scale(1)",
         },
         {
           opacity: 0.4,
-          transform: "translateY(-35%)",
+          transform: "scale(0.5)",
         },
       ],
       {

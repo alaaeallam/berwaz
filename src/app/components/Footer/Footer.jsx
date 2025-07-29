@@ -65,8 +65,8 @@ const Footer = () => {
           <div className="col">
             <div className="row">
               <div className="footer-socials">
-                <a href="https://www.instagram.com/codegridweb/">Instagram</a>
-                <a href="https://x.com/codegridweb">Twitter</a>
+                <a href="https://www.instagram.com/berwaz.rania/">Instagram</a>
+                <a href="https://x.com/RaniaMaged18">Twitter</a>
               </div>
 
               <div className="langs">
@@ -77,29 +77,29 @@ const Footer = () => {
 
             <div className="row">
               <div className="location">
-                <h3>New York</h3>
-                <p>245 Fifth Avenue</p>
+                <h3>EGYPT</h3>
+                {/* <p>245 Fifth Avenue</p>
                 <p>New York, NY 10016</p>
-                <p>USA</p>
+                <p>USA</p> */}
               </div>
 
-              <div className="location">
+              {/* <div className="location">
                 <h3>Tokyo</h3>
                 <p>3-5-7 Ginza</p>
                 <p>Chuo-ku, Tokyo 104-0061</p>
                 <p>Japan</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
 
         <div className="footer-logo">
-          <h1 ref={logoRef}>ISOChrome</h1>
+          <h1 ref={logoRef}>Rania Maged</h1>
         </div>
 
         <div className="footer-copyright">
-          <p>ISOChrome &copy;2025. All rights reserved.</p>
-          <p>By Codegrid</p>
+          <p>Rania Maged &copy;2025. All rights reserved.</p>
+          {/* <p>By Codegrid</p> */}
         </div>
       </div>
     </div>

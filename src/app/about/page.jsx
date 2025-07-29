@@ -109,7 +109,7 @@ const page = () => {
       <div className="page" ref={container}>
         <section className="about-hero">
           <div className="about-hero-bg">
-            <img src="/about/hero.jpg" alt="ISOChrome About Hero Image" />
+            <img src="/about/hero.jpg" alt="Rania Maged About Hero Image" />
           </div>
 
           <div className="container">
@@ -138,48 +138,23 @@ const page = () => {
 
             <div className="about-copy-wrapper">
               <AnimatedCopy>
-                ISOChrome is more than a creative agency—we are storytellers,
-                strategists, and visionaries dedicated to redefining brand
-                communication. We craft experiences that go beyond visuals,
-                blending strategy with creativity to create lasting impact.
-                Every brand has a unique identity, and we specialize in bringing
-                that identity to life with immersive storytelling, cutting-edge
-                design, and audience-driven narratives. From concept to
-                execution, we ensure that every campaign is crafted with
-                precision and passion. We don’t just create content—we engineer
-                experiences that inspire engagement and action.
+                Rania Maged is more than a creative agency—she is an artist, storyteller, and visionary dedicated to transforming brands through the power of design and imagination. Her work goes beyond visuals, weaving strategy, emotion, and artistry into every creation to leave a lasting impression.
               </AnimatedCopy>
 
               <AnimatedCopy delay={0.25}>
-                Our approach is built on innovation, ensuring every project is
-                fresh, dynamic, and purpose-driven. Whether it's **brand
-                strategy, influencer collaborations, or digital campaigns**, we
-                help brands stand out, connect authentically, and leave a
-                lasting impression. We combine creative vision with analytical
-                insights to develop strategies that not only capture attention
-                but also drive real impact in an ever-evolving digital
-                landscape. We believe in the power of collaboration. By working
-                closely with our clients, we align our creative strategies with
-                their business objectives, ensuring that every campaign is
-                tailored to meet their unique goals.
+                With a focus on innovative brand strategies, artistic collaborations, and engaging digital campaigns, Rania helps brands stand out authentically in a crowded world. Her unique process fuses artistic vision with strategic thinking, ensuring every project feels alive, impactful, and timeless.
+
               </AnimatedCopy>
 
               <AnimatedCopy delay={0.5}>
-                At ISOChrome, we push boundaries, challenge conventions, and
-                shape the future of branding. With every campaign, we aim to
-                turn ideas into movements, transforming how brands interact with
-                their audiences in a rapidly evolving digital world. Creativity
-                isn’t just about aesthetics—it’s about impact, engagement, and
-                innovation that goes beyond the expected. As pioneers in the
-                creative space, we thrive on experimentation and fearless
-                execution.
+                At Rania Maged Studio, creativity is not just decoration—it’s a force for transformation. Every project is a new canvas, every campaign a story waiting to be told, and every design a bridge between brand and audience. With fearless creativity and a commitment to pushing boundaries, Rania turns ideas into living, breathing works of art that resonate far beyond the screen.
               </AnimatedCopy>
 
               <div className="about-copy-img">
                 <div className="about-copy-img-wrapper">
                   <ParallaxImage
                     src="/about/about-copy.jpg"
-                    alt="ISOChrome Creative Team at Work"
+                    alt="Rania Maged Creative Team at Work"
                     speed={0.2}
                   />
                 </div>
@@ -269,7 +244,7 @@ const page = () => {
         <section className="founder-voice">
           <div className="container">
             <AnimatedCopy tag="h2">
-              "ISOChrome revolutionizes influencer marketing by seamlessly
+              "Rania Maged revolutionizes influencer marketing by seamlessly
               connecting brands with powerful voices across social media,
               crafting narratives that leave a lasting impact.”
             </AnimatedCopy>

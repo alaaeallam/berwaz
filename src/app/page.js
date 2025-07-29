@@ -83,11 +83,11 @@ export default function Home() {
 
           <div className="hero-footer">
             <div className="site-info">
-              <a href="https://www.youtube.com/@codegrid">Watch Showreel</a>
+              <a href="https://www.instagram.com/berwaz.rania/">Watch Showreel</a>
             </div>
 
             <div className="contact-link">
-              <a href="https://www.youtube.com/@codegrid">Youtube</a>
+              <a href="https://www.instagram.com/berwaz.rania/">Instagram</a>
             </div>
           </div>
         </section>

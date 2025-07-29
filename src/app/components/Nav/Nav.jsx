@@ -23,11 +23,11 @@ const Nav = () => {
       [
         {
           opacity: 1,
-          transform: "translateY(0)",
+          transform: "scale(1)",
         },
         {
           opacity: 0.4,
-          transform: "translateY(-35%)",
+          transform: "scale(0.5)",
         },
       ],
       {
@@ -247,7 +247,7 @@ const Nav = () => {
       <nav ref={navRef}>
         <div className="logo">
           <a href="/" onClick={(e) => handleNavigation(e, "/")}>
-            ISOChrome
+            Rania Maged
           </a>
         </div>
         <div className="menu-toggle-open" ref={menuOpenBtnRef}>
@@ -258,7 +258,7 @@ const Nav = () => {
       <div className="menu-overlay" ref={menuOverlayRef}>
         <div className="menu-overlay-bar" ref={menuOverlayBarRef}>
           <div className="logo">
-            <a href="/">ISOChrome</a>
+            <a href="/">Rania Maged</a>
           </div>
           <div className="menu-toggle-close" ref={menuCloseBtnRef}>
             <p>Close</p>
@@ -271,10 +271,10 @@ const Nav = () => {
           </div>
           <div className="socials">
             <div className="media-link">
-              <a href="https://www.instagram.com/codegridweb/">Instagram</a>
+              <a href="https://www.instagram.com/berwaz.rania/">Instagram</a>
             </div>
             <div className="media-link">
-              <a href="https://x.com/codegridweb">Twitter</a>
+              <a href="https://x.com/RaniaMaged18">Twitter</a>
             </div>
           </div>
         </div>

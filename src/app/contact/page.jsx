@@ -62,11 +62,11 @@ const Page = () => {
               <div className="col">
                 <div className="sub-col">
                   <AnimatedCopy>New Collaborations</AnimatedCopy>
-                  <AnimatedCopy>hello@isochrome.io</AnimatedCopy>
+                  <AnimatedCopy>hello@Rania Maged.io</AnimatedCopy>
                 </div>
                 <div className="sub-col">
-                  <AnimatedCopy>Join ISOChrome</AnimatedCopy>
-                  <AnimatedCopy>jobs@isochrome.io</AnimatedCopy>
+                  <AnimatedCopy>Join Rania Maged</AnimatedCopy>
+                  <AnimatedCopy>jobs@Rania Maged.io</AnimatedCopy>
                 </div>
               </div>
             </div>
